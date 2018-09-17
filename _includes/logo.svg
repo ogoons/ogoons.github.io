@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="90" height="24" viewBox="0 0 154 44">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="22" viewBox="0 0 147 42">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,13 +27,5 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<defs>
-    <style>
-      .cls-1 {
-        font-size: 45.833px;
-        font-family: KoreanYNMYTL;
-      }
-    </style>
-  </defs>
-  <text id="담백로그" class="cls-1" x="-1.828" y="36.07">담백로그</text>
+<image id="담백로그" width="147" height="42" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAAqCAQAAAAdKaEjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfiCRIHLDh0JCj5AAACvUlEQVRo3u2a232bMBTGv/Tn97JBtUG0geUNsoGzQZsJgidwR0gmaDsBygSVJyjdgA3oA0JchQ+6GOP6nwcdS+b48AXdjngAwzOopLrMILR1MHU1z2DakpDWWoHMtD3osjQ1u9aVAGbFWCN7PhypgxIoyX81malJB37H2/q1YsRrUyN6PufEaI/M0U+JEp9CKH773GUicZeJxKbzabd0OBYUObIj+ERrjgPRz95MOQD6Msml9bBQkCMrJlvz0YF9jG1XppCdLgno68rY+LuAAMcWHMysgCr22BqbL32jfvjK9BWv1jbWfXDXjK9MSYAYMn8XsQnR6XwRSwdwnnAyFVC9mhy5sbnXcyeWfuL8ZZJQOEENRALeW9NvtoZnxo6vTAfySsSO1KVYVooprmFsqlfYpZeXqFyDTPOQxO/lIX90fTItsu+8ZwhIdGU6l8lzm5YZvv3vm5UptkjxCL7yLUsBxJVJLDrFMyQjazkq3FgKuMWxieEJR/zGHzx5eEm6HzczMno+k2wRNRvFwMDxBdxzU9T4M5QSqGRKI96AgsQJP/EjWAeso/2sO0Yov21Yv8JtbHrHh7bkoO2XbpOdzfDUFfN49byeAjOWjtZNpreJtu+kK8YOAXatVl9yr1NfZqyiKiqZEud1Te44Xo0dArjfVo1CrrMVblHVPBrrVBWVTNw5nxMiQ+BC/e/J8ReAQgF15lRlDtxYqipirZv80mj9Dil7hxFxSVqdTlVFLJnEBW4nNdZb0HxAE7sZUtaXIWho5jwZVKbm2EzWxlAmSqLiuPat7CQveOlXDWWSBEfF2W9QvHRxn20vQKxONz95tvjpyRS3t/WNwvUP4ZT3LveWmbW9End5fxP6xVA5lIny6PPY2rRghF2cXQA5y4+VoUzighKshvvYROIuE4nrGcJtLw6G2s85+qmOov8BqNz2CIxbIwgAAAAASUVORK5CYII="/>
 </svg>
