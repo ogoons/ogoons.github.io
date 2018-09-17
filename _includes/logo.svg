@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="150" height="41" viewBox="0 0 150 41">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="24" viewBox="0 0 154 44">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,13 +27,5 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<defs>
-    <style>
-      .cls-1 {
-        font-size: 24.000px;
-        font-family: KoreanYNMYTL;
-      }
-    </style>
-  </defs>
-  <text id="담백로그" class="cls-1" x="0.5" y="20.086">담백로그</text>
+<image id="레이어_1" data-name="레이어 1" width="154" height="44" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAsCAQAAAA3ZWn0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfiCRIHGxjfTagFAAADBElEQVRo3u2avW/TQBiHn6AgoUgMSQeGDiAkj0wZgtShGYoECxtT/4cODM2IsmH/CUxIiIUhA0sHGJIhUrOwdGBAqsLQoUMbKRFRJCTCEH9cHAefz+dP8kTKXS7n1+effe+9d74KNe4hy4zfdm7plj1ltFHPs7lgLpQ3fJYa3Lgle9wC0OLcLatstRuFidBaLVR5w6l07SCBgvBsWnSE8pvIlrbZjYJzO9Z5QVvBVpc5VBUOLAdtpRtgMoc7Wbe9iOxEU0DsnoM1/xPEj4xb+56eZE2DD8k1QxRtpOSc0+S7dM3w29sJfUQcxDEe2HVPJfSNnhXqGFysxWWwL8RmpSG+aAZwwEsOAdjziXbMcdaXqJ/4oulyuIbth4wM1ZAkP8HteXwTaZEf0WSQn3sm+rzqFM2ix8xXdsk74dfbmGdQm3tqJ75oA0zG/PQNAA6XmMKvuKLlhPiidTSFxB+5AqBlj8M5Jj8+7SRgPS2n5Ee0aITPkz1m0jUlKapomc6Td3NPBUTRTlmGflrKZ2qWZexMvnvWecVjmhxRz/pStTCB5EVr8inr66QCsd5HibOLJZTdpzVoYfJH21M+XiVV+pEOm2atQyh3uY+BwXNti1IHbs7uNVXOOEvhUix6XPBLmz1xcdOwv5+wn8jq3QM3d71KVH2a5eam/6hxzZCpMC8NP0qWNBc3vYhhuEpUReuE/NuROmohyLiw06lQpoexa1sNby6cf+cUgCkRSXqfPq9pUYt5zppg0XYJVbsx6utUarsyksEC+txyxTxw/4YKD4X8ZJUkGaep7fHxWGys0W2+LL6y62jfGeTyyM0NnHMkKVrcdVZrwwfKvyzWR9vNfXYyZQhudcyMt+Pd+KGTKerSUFrUhLH8m5Pxi/aVZ1LGkvIgeWMeFDwl+aTJ7/ERMf/vdwRqbnuUf9HKMBCkTnEGApmNxebWQLu7FvOpbVJ2bflFa/IlU2m2I7Ox+HBr1zbXRFPbpOza8otW5yhjcQrAzqcpsBNNgeIMBN21rTRRmei09RdrSMQv80LpWAAAAABJRU5ErkJggg=="/>
 </svg>
