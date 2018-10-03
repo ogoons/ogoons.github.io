@@ -32,7 +32,8 @@ fun letNullCheck(arg: String?) {
 }
 ```
 하지만 위와 같은 코드에는 오류가 있습니다.<br>
-**arg가 Null 인 경우는 문제가 없지만 NotNull인 경우 NotNull인 경우의 구문과 Null 구문까지 모두 실행해 버립니다.**<br><br>
+**arg가 Null 인 경우는 문제가 없지만 NotNull인 경우 NotNull인 경우의 구문과 Null 구문까지 모두 실행해 버립니다.**
+
 이런 경우는 다음과 같이 elvis 연산자 뒤에 let을 붙여줌으로써 구현이 가능합니다.
 ```
 fun letNullCheck(arg: String?) {
@@ -44,5 +45,7 @@ fun letNullCheck(arg: String?) {
 }
 ```
 하지만 배보다 배꼽이 더 커졌네요.
+
 원래 사용하던 `if (arg != null)` 이 가독성면에서 더 좋아보입니다.
+
 그냥 이걸 쓰도록 합시다.
