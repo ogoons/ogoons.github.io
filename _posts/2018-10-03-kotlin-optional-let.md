@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Kotlin] optional + let을 통한 null 체크
+title: Kotlin optional + let을 통한 null 체크
 featured-img: sleek
 ---
 
