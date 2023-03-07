@@ -28,7 +28,7 @@ plainwhite:
   # generate social links in footer
   social_links:
     github:  ogoons
-    linkedIn: in/ogoons
+    email: ogonns@hanmail.net
     #dribbble: jekyll
     #flickr:   jekyll
     #instagram: jekyll
@@ -38,7 +38,7 @@ plainwhite:
     #soundcloud: jekyll
     #telegram: jekyll
     #gitlab: jekyll
-    email: ogonns@hanmail.net
+
 
     # Mastodon instances
     # mastodon:
