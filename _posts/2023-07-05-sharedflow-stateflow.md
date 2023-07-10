@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "SharedFlow, StateFlow 알아보기"
-categories: Flow
+categories: Coroutine Flow
 ---
 
 LiveData 라는 Observer 패턴을 구현하기 위한 훌륭한 도구가 있지만 Android 에서 만 사용 가능한 단점이 있기에 Flow 를 사용한 데이터 스트림 구현을 권장합니다.
 
-# SharedFlow
+## SharedFlow
 
 구독자에게 Flow 를 이용한 효율적인 데이터 방출을 목적으로 만들어졌습니다.
 
@@ -36,7 +36,7 @@ public fun <T> MutableSharedFlow(
 - **BufferOverflow.DROP_LATEST :** 가장 최근 값을 버리고, 새로운 값으로 대체합니다.
 - **BufferOverflow.DROP_OLDEST :** 가장 오래된 값을 버리고, 새로운 값으로 대체합니다.
 
-# StateFlow
+## StateFlow
 
 이름 그대로 구독자에게 상태 데이터를 방출하기 위해 만들어졌습니다. 
 
