@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "다운로드 페이지"
+title: "다운로드"
 categories: ALGO HALO
 ---
 

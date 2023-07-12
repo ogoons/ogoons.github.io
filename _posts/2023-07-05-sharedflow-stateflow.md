@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SharedFlow, StateFlow 알아보기"
+title: "[Coroutine] SharedFlow & StateFlow 알아보기"
 categories: Coroutine Flow
 ---
 

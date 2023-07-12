@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coroutine - SupervisorJob"
+title: "[Coroutine] SupervisorJob"
 categories: Coroutine
 ---
 
