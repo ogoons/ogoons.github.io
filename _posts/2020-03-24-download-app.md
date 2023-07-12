@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Etc] 다운로드"
+title: "[App] 내가 만든 앱 다운로드"
 categories: ALGO HALO
 ---
 
