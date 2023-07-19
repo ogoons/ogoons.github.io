@@ -4,6 +4,8 @@ title: "[Kotlin] Collection Functions"
 categories: Kotlin
 ---
 
+코틀린 컬렉션 확장 함수들을 알아봅니다. 필드에서 생각보다 많이 사용하므로 숙지해놓으면 좋습니다.
+
 ## filter
 
 특정 조건을 만족하는 컬렉션을 반환합니다.\
