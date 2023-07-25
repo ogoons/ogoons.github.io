@@ -7,8 +7,7 @@ categories: Coroutine
 코루틴을 활용한 비동기 프로그래밍을 하다보면, 현재 실행 중인 코루틴의 이름을 알고 싶은 경우가 있습니다.
 
 ## CoroutineName
-
-![CouroutineName Hierarchy](./images/2023-07-24-coroutine-name.png)
+![CouroutineName Hierarchy]({{ site.url }}/assets/images/bio-photo-keyboard.jpg)
 
 CoroutineName 의 최상위 부모는 CoroutineContext 이므로 코루틴을 시작하거나 CouroutineScope 를 생성할 때 자유롭게 첨부가 가능합니다.
 
