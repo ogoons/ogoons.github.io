@@ -2,6 +2,8 @@
 @import "ext/normalize";
 @import "syntax";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 $linkColor: #0a59b0;
 $mobileW: 768px;
 $smallMobileW: 480px;
@@ -243,7 +245,8 @@ main {
   padding-left: 30px;
 }
 .post {
-  font-family: "Merriweather", sans-serif;
+  // font-family: "Merriweather", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
