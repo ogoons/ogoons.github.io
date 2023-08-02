@@ -68,7 +68,8 @@ println(group)
     Car(name=SONATA, brand=Hyundai, type=Sedan), 
     Car(name=PALISADE, brand=Hyundai, type=SUV), 
     Car(name=TORRES, brand=KG-Mobility, type=SUV), 
-    Car(name=K5, brand=Kia, type=Sedan)]
+    Car(name=K5, brand=Kia, type=Sedan)
+]
 ~~~
 
 ## distinct

@@ -58,7 +58,7 @@ SupervisorJob 을 범위를 설정하여 적용하는 방법도 설명하겠습�
 앞서 SupervisorJob 을 사용한 코드 스니펫에서 SupervisorJob 대신 사용하고자 하는 코루틴을 아래 예시와 같이 감싸주면 됩니다.
 
 ~~~kotlin
-supervisorJob {
+supervisorScope {
     launch {
         ...
     }
