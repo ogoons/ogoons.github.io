@@ -37,7 +37,7 @@ categories: Android
 ## Tracking Binder Transaction
 
 Binder 트랜잭션의 내용을 추적할 수 있는 좋은 [toolargetool](https://github.com/guardian/toolargetool) 이란 도구가 있어서 소개합니다.\
-TransactionTooLargeException 예외에 대한 디버깅에 도움을 줄 수 있는 멋진 도구입니다!
+TransactionTooLargeException 예외에 대한 디버깅에 도움을 줄 수 있는 멋진 도구입니다.
 
 ## Conclusion
 
