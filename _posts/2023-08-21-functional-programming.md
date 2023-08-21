@@ -6,7 +6,7 @@ categories: Kotlin
 
 코틀린의 함수형 프로그래밍 문법을 기록하고자 글을 작성합니다.
 
-# 일급 함수 (First Class Function)
+## 일급 함수 (First Class Function)
 
 >객체처럼 취급되는 함수를 의미한다.
 
@@ -52,7 +52,7 @@ fun main() {
 }
 ~~~
 
-# 고차 함수 (High Order Function)
+## 고차 함수 (High Order Function)
 
 >고차함수란 함수를 매개변수로 사용하거나 함수를 반환하는 함수입니다.
 
@@ -65,7 +65,7 @@ fun main() {
 
 일급함수의 예제와 같으므로 생략하겠습니다.
 
-# 람다식 (Lambda Expression)
+## 람다식 (Lambda Expression)
 
 >코드 블럭을 다른 함수에 넘길 수 있는 표현식을 말합니다.
 
