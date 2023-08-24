@@ -73,7 +73,7 @@ fun drawRect(width: Width, height: Height)
 1.3에서는 알파, 1.4에서는 베타 버전으로 사용이 가능합니다.  
 inline class 와 사용 방법은 동일하나, 달라진 특징은 아래와 같습니다.
 
-- **@JvmInline** 어노테이션을 추가해주어 컴파일러에게 inline 하도록 지시해야 합니다.
+- **@Jvminline** 어노테이션을 추가해주어 컴파일러에게 inline 하도록 지시해야 합니다.
 
 변경된 코드는 다음과 같습니다.
 
