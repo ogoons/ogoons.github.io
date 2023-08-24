@@ -4,6 +4,8 @@ title: "[Kotlin] inline 수정자에 대하여 알아보기"
 categories: Kotlin
 ---
 
+inline 수정자와 관계되는 다양한 키워드에 대해 정리해봅니다.
+
 ## inline functions
 
 코틀린 공식 문서에 설명된 바를 요약하면 다음과 같습니다.
