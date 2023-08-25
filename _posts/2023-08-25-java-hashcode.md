@@ -123,8 +123,8 @@ public class Main {
 1
 ~~~
 
-여기까지 보면 animal1, animal2 의 equals() 와 hashCode() 메소드를 모두 오버라이딩 해야 문제없이 사용할 수 있는 것을 알 수 있습니다.  
-자바에서는 **hashCode() 반환값이 우선 일치하고, equals() 반환값도 true** 여야 비로소 동등한 객체로 취급하기 때문입니다.
+여기까지 살펴보면 Animal 클래스의 equals() 와 hashCode() 메소드를 모두 오버라이딩 해야 문제없이 사용할 수 있는 것을 알 수 있습니다.  
+이러한 이유는, Hash 기반의 Collection 에서는 **hashCode() 반환값이 우선 일치하고, equals() 반환값도 true** 여야 비로소 동등한 객체로 취급하기 때문입니다.
 
 그렇다면, 아래에서 hashCode() 메소드에 대해 좀 더 다뤄보겠습니다.
 
