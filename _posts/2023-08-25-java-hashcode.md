@@ -36,7 +36,7 @@ public boolean equals(Object anObject) {
 
 이와 같이 내부 값이 동일한 경우 오버라이딩 하여 자주 사용하는 메소드 입니다.
 
-하지만, Hash 를 사용하는 Collection 에서 이러한 객체를 다루게 되면 문제가 됩니다.
+하지만, Hash 를 사용하는 Collection 에서 이러한 객체를 다루게 되면 문제가 됩니다.  
 예를 들어 두 개의 동물(호랑이)을 의미하는 객체를 생성한 후 equals() 를 오버라이딩 한 후, 이를 중복을 허용하지 않는 Collection 인 HashSet 에 추가해 보겠습니다.
 
 ~~~java
