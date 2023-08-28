@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kotlin] Properties 와 Backing Fields 에 대하여
+title: "[Kotlin] Properties 와 Backing Fields 에 대하여"
 categories: Kotlin
 ---
 
