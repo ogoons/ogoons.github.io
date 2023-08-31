@@ -123,17 +123,16 @@ Hello       // 최초 참조의 결과 값
 Hello       // 두 번째 참조의 결과 값
 ~~~
 
-### Lazy<> 인터페이스
+lazy() 메소드는 Lazy<> 인터페이스를 구현한 클래스의 객체를 반환하고 있는데, **Lazy<> 인터페이스**에 대해서 알아보겠습니다.
 
-추가적으로 Lazy<> 인터페이스 상속을 사용한 초기화 위임에 대해서 살펴보겠습니다.  
-안드로이드에서는 다음 코드와 같이 Fragment 내부에서 특정 프로퍼티에 ViewModel 초기화를 위임한 코드를 가장 많이 접해보았을 것 입니다.
+안드로이드 개발에서 우리는 Fragment 내부 특정 프로퍼티에 ViewModel 초기화를 위한 아래와 같은 코드를 많이 접해보았을 것입니다.
 
 ~~~kotlin
 private val viewModel: MyViewModel by viewModels()
 ~~~
 
-Fragment ktx를 사용하면 위와 같이 viewModels() 확장 함수를 사용하여 지연 초기화의 목적을 달성할 수 있습니다.
-이에 관하여 내부 구현은 어떠한 지 살펴보도록 하겠습니다.
+Fragment ktx를 사용하면 viewModels() 확장 함수를 사용하여 지연 초기화의 목적을 달성할 수 있습니다.  
+viewModels() 의 내부 구현은 어떠한 지 살펴보도록 하겠습니다.
 
 ~~~kotlin
 @MainThread
@@ -158,8 +157,8 @@ public inline fun <reified VM : ViewModel> Fragment.viewModels(
 }
 ~~~
 
-createViewModelLazy() 를 호출하고 있음을 확인할 수 있습니다.  
-createViewModelLazy() 메소드의 구현을 살펴보면
+최종적으로 createViewModelLazy() 를 호출하고 있음을 확인할 수 있습니다.  
+createViewModelLazy() 메소드의 구현을 들어가 봅니다.
 
 ~~~kotlin
 @MainThread
@@ -177,8 +176,8 @@ public fun <VM : ViewModel> Fragment.createViewModelLazy(
 }
 ~~~
 
-여기까지 보았을 때, 지연 초기화의 목적을 달성하기엔 힘들어 보입니다.  
 단순히 Lazy<> 인터페이스를 구현한 ViewModelLazy 클래스의 객체를 최종 반환해주는 것을 확인할 수 있습니다.  
+여기까지 보았을 때, 지연 초기화의 목적을 달성하기엔 힘들어 보입니다.  
 그렇다면 ViewModelLazy 구현도 살펴봅니다.
 
 ~~~kotlin
@@ -214,13 +213,13 @@ public class ViewModelLazy<VM : ViewModel> @JvmOverloads constructor(
 }
 ~~~
 
-value 의 getter 를 호출하면 ViewModelProvider 를 통하여 ViewModel 의 인스턴스를 제공받고, cached 프로퍼티에 캐시하고 있음을 알 수 있습니다.
+value 의 getter 를 호출하면 ViewModelProvider 를 통하여 ViewModel 의 인스턴스를 제공받고, cached 프로퍼티에 캐시하고 있음을 알 수 있습니다.  
 싱글톤 패턴의 그것과 비슷하게 구성되어 있으며, Lazy<> 인터페이스를 상속하여 초기화 동작을 직접 구현하는 방식입니다.
 
-앞서 설명한 lazy() 메소드도 구현을 살펴봄면 Lazy<> 인터페이스를 상속한 SynchronizedLazyImpl 객체를 반환하는 비슷한 방식으로 초기화를 구현하고 있습니다.  
-내부에는 멀티스레딩 환경에서 사용할 수 있도록 동기화에 대한 다소 긴 코드를 구현하고 있습니다.
+앞서 설명한 lazy() 메소드도 구현부를 보면 Lazy<> 인터페이스를 상속한 SynchronizedLazyImpl 객체를 반환하는 방식으로 비슷하게 초기화를 구현하고 있습니다.  
+내부에는 멀티스레딩 환경에 대응할 수 있도록, synchronized 키워드를 사용한 다소 긴 코드를 구현하고 있습니다.
 
-결론은 이러한 패턴을 이용하면, 객체 초기화에 대한 상용구 코드를 줄일 수 있고, 복잡한 초기화 동작을 특정 클래스(ViewModelLazy, SynchronizedLazyImpl 등)에게 위임할 수 있는 멋진 설계라 할 수 있습니다.
+결론은 이와 같은 패턴으로 객체 초기화에 대한 상용구 코드를 줄일 수 있으며, 복잡한 초기화 동작을 특정 클래스(ViewModelLazy, SynchronizedLazyImpl 등)에게 위임할 수 있는 멋진 설계라 할 수 있습니다.
 
 ### Observable
 
