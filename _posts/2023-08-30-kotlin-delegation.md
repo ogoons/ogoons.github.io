@@ -249,7 +249,9 @@ first -> second
 second -> third
 ~~~
 
-observable() 외 vetoable() 메소드를 사용하면, 핸들러에서 Boolean 값을 반환하여 값이 할당되었을 때 저장할 것인지 말지를 결정할 수 있습니다.
+### Vetoable
+
+observable() 과 비슷한 vetoable() 메소드를 사용하면 핸들러에서 반환되는 Boolean 값을 기준으로 값이 할당되었을 때, 저장할 것인지 말지를 결정할 수 있습니다.
 
 ~~~kotlin
 var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
