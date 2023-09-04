@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[Kotlin] Generic 파헤치기 Part 1 - 정의, 타입 매개변수 제약"
+title: "[Kotlin] Generics 파헤치기 Part 1 - 정의, 타입 매개변수 제약"
 categories: Kotlin
 ---
 
 코틀린의 제네릭 프로그래밍 방식에 대해서 파헤쳐보기 첫 번째 시간입니다.
 
-## Generic 이란 무엇일까?
+## Generics 이란 무엇일까?
 
 다른 객체지향 프로그래밍 언어와 마찬가지로 코틀린만의 특색있는 제네릭 프로그래밍을 지원하고 있습니다.  
 제네릭을 한국어로 해석하면 일반적인, 포괄적인 뜻을 함유하고 있습니다.  
