@@ -51,7 +51,7 @@ fun main() {
 ## 다양한 제네릭 프로그래밍 방식
 
 일반 클래스 외에 **data class, abstract class, sealed class, interface, 그리고 함수나 확장된 프로퍼티**에도 제네릭하게 사용할 수 있습니다.  
-(다만, enum class 는 지원하지 않습니다.)
+(enum class 는 지원하지 않습니다.)
 
 아래는 함수에서의 사용방법입니다.
 
