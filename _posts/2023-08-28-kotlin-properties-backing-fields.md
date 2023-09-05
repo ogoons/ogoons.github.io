@@ -140,9 +140,9 @@ class C {
 하지만 시험판 코드로서만 사용해볼 수 있고 안정적이지 않다고 합니다. ([레퍼런스 문서](https://github.com/Kotlin/KEEP/blob/explicit-backing-fields-re/proposals/explicit-backing-fields.md))  
 게다가 막상 사용하자니 아래 경고를 띄우는 것을 보니 아직도 IDE 에서는 지원하지 않는 것 같습니다.
 
-~~~
-Explicit backing field declarations are not supported in FE 1.0
-~~~
+
+> Explicit backing field declarations are not supported in FE 1.0
+
 
 사용해보려면 앱 수준의 gradle 파일에 [코틀린 옵션](https://gist.github.com/dellisd/a1e2ae1a7e6b61590bef4b2542a555a0)을 별도로 추가해야 합니다.  
 아직도 대중적으로 사용되지는 않으며, 안정화 될때까지 기다려야 할 것 같습니다.

@@ -46,7 +46,6 @@ h2 {
   @media screen and (max-width: $mobileW) {
     margin: 0.3em 0;
   }
-  padding-top: 1rem;
 }
 
 main {
@@ -265,7 +264,12 @@ main {
     }
   }
   h1,
-  h2,
+  h2 {
+    font-family: Raleway, sans-serif;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #eee;
+  }
   h3,
   h4,
   h5,
