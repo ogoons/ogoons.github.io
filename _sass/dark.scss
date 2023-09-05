@@ -18,6 +18,13 @@
 		color: #ddd;
 	}
 
+	.post {
+		h1,
+		h2 {
+		  border-bottom: 1px solid #2b2b2b;
+		}
+	}
+
 	.social [class^="icon-"] {
 		color: $dark_text_color
 	}
@@ -48,6 +55,12 @@
 			background-color: #333;
 			color: #fff;
 		}
+	}
+
+	code {
+		font-family: 'Inter', 'Noto Sans KR', sans-serif;
+		font-size: 92%;
+		border-radius: 1rem;
 	}
 
 	a {
