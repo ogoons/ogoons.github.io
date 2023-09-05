@@ -46,7 +46,9 @@ h2 {
   @media screen and (max-width: $mobileW) {
     margin: 0.3em 0;
   }
+  padding-top: 1rem;
 }
+
 main {
   margin: 0 90px;
   display: flex;
@@ -289,6 +291,7 @@ main {
   overflow: hidden;
   transition: width 0.1s;
 }
+
 table {
   th, td {
     padding: 8px 13px;
@@ -300,10 +303,18 @@ table {
   }
 }
 
+blockquote {
+  padding: 0 0.5rem;
+  margin: 0 0 0 0;
+  border-left: .2em solid #555;
+  opacity: .65;
+  background-color: #dfe2e5;
+}
+
 code {
   font-family: 'Inter', 'Noto Sans KR', sans-serif;
   font-size: 92%;
-  border-radius: 0.9rem;
+  border-radius: 1rem;
 }
 
 footer {
