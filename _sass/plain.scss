@@ -3,6 +3,7 @@
 @import "syntax";
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 $linkColor: #0a59b0;
 $mobileW: 768px;
@@ -295,8 +296,14 @@ table {
   }
   th {
     background-color: #eee;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
   }
+}
+
+code {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  font-size: 92%;
+  border-radius: 0.9rem;
 }
 
 footer {
