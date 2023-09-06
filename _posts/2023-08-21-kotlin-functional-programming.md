@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kotlin] 함수형 프로그래밍"
+title: "[Kotlin] Functional Programming"
 categories: Kotlin
 ---
 
