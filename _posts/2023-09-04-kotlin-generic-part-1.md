@@ -158,4 +158,4 @@ val <T> School<T>.age: Int where T: Student, T : Boy
     get() = 15
 ~~~
 
-다음 포스팅에서는 코틀린 제네릭의 변성(variance)을 비롯한 in, out 등의 관련 키워드도 같이 다루어 보겠습니다.
+다음 포스팅에서는 코틀린 제네릭의 변성(Variance)을 비롯한 in, out 등의 관련 키워드도 같이 다루어 보겠습니다.
