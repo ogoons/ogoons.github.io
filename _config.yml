@@ -14,7 +14,7 @@ sass:
 plainwhite:
   name: OGOONS
   tagline: 담백로그
-  date_format: "%b %-d, %Y"
+  date_format: "%Y-%m-%d"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
