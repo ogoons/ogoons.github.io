@@ -4,15 +4,19 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# 담백로그 📝
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+![OGOONS]({{ site.url }}/assets/about.jpg)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+BASIC 으로 프로그래밍에 입문하였습니다.  
+돌이켜보면 어머니가 보내주신 컴퓨터 학원에서 코드를 다 쳐내면 게임을 시켜준다고 하길래, 열심히 타이핑하던 경험이 밥벌이가 될 줄 몰랐습니다.
 
+나도 애플리케이션을 만들어보고 싶다는 생각에 독학으로 Visual Basic, C++/MFC 를 공부하여, 윈도우용 애플리케이션을 만들면서 학창시절을 보냈습니다.
 
-[jekyll-organization]: https://github.com/jekyll
+지금은 안드로이드 앱 개발을 하고 있습니다.
+
+일반 사용자가 쉽게 접할 수 있는 GUI가 있는 소프트웨어를 만들어 사람들에게 선보이는 것을 좋아합니다.  
+안드로이드는 그 목적을 달성하기에 가장 훌륭한 모바일 플랫폼 입니다.
+
+내가 만든 것들이 비록 기술적으로 대단한 것이 아닐지라도 사람들에게 부디 쓰임새가 있기를 바랍니다.  
+아울러, 이곳은 안드로이드 개발을 비롯해 다양한 경험과 생각을 기록할 수 있는 공간이 되길 바랍니다.

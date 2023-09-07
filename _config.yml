@@ -22,12 +22,16 @@ plainwhite:
   html_lang: "kr" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
   disqus_shortname: ogoons
   condensed_mobile:
-    #- home
+    - home
     - page
     - post
+
+  navigation:
+      - title: About
+        url: "/about"
   # generate social links in footer
   social_links:
-    github:  ogoons
+    github: ogoons
     email: ogonns@hanmail.net
     #dribbble: jekyll
     #flickr:   jekyll
@@ -49,11 +53,11 @@ plainwhite:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
+# header_pages:
 # - about.md
 
 # Build settings
-#theme: plainwhite
+theme: plainwhite
 remote_theme: samarsault/plainwhite-jekyll
 
 plugins:
