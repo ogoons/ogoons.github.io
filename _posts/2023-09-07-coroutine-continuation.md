@@ -22,7 +22,7 @@ suspend fun postItem(item: Item) {
 ~~~
 
 하나의 suspend 함수 내부에서 3개의 하위 루틴을 호출하고 있습니다.  
-코루틴은 이 코드를 내부적으로 Continuation Passing Style 로 변환해서 사용하고 있습니다.
+코루틴은 이 코드를 내부적으로 **Continuation Passing Style** 로 변환해서 사용하고 있습니다.
 
 코드는 다음과 같습니다.
 
@@ -57,7 +57,7 @@ fun postItem(item: Item, cont: Continuation) {
 
 중간에 **State Machine** 인 **sm** 객체를 통해서 연산된 결과를 현재 label 에 해당하는 하위 함수를 호출하고 전달하며 호출이 끝나면 다시 **resume()** 의 호출을 통해 **postItem()** 을 재귀호출하고, 다음 label 의 하위 함수를 호출하는 식으로 하나의 함수 내부에서 연속성을 발생시키고 있는 것을 볼 수 있습니다.
 
-이러한 방식을 Continuation Passing Style (CPS) 라고 합니다.
+이러한 방식을 **Continuation Passing Style (CPS)** 라고 합니다.
 
 [안드로이드 공식 문서](https://developer.android.com/kotlin/coroutines/coroutines-adv)에서는 다음과 같이 설명하고 있습니다.
 
@@ -115,7 +115,8 @@ public inline fun <T> Continuation<T>.resumeWithException(exception: Throwable):
     resumeWith(Result.failure(exception))
 ~~~
 
-이 함수들은 아래 Chris Banes 의 예제를 보면 suspendCancellableCoroutine 를 사용하여 구현이 가능합니다.
+이 함수들은 **suspendCancellableCoroutine** 를 사용하여 구현이 가능합니다.  
+아래 Chris Banes 의 코드가 가장 설명하기 적합한 예제인 것 같습니다.
 
 ### View#OnLayoutChangeListener (Chris Banes example)
 
@@ -151,4 +152,8 @@ viewLifecycleOwner.lifecycleScope.launch {
 }
 ~~~
 
-뷰의 크기 확정 시점을 알기 위한 콜백 루틴을 **suspendCancellableCoroutine** 으로 감싸서 간결해졌고, 이는 호출부에서 가독성을 증대시킬 수 있습니다.
+뷰의 크기 확정 시점을 알기 위한 콜백 루틴을 **suspendCancellableCoroutine** 으로 감싸서 간결해졌고, 내부에서 취소가 발생했을 때 OnLayoutChangeListener 의 해제 루틴도 동작하도록 대응이 되었습니다.
+
+## Conclusion
+
+개인적으로 **suspendCancellableCoroutine** 을 자주 활용하는 편이며, 콜백 스타일로 설계된 API 를 코루틴 내부에서 사용할 때 Continuation 을 직접 핸들링 한다면, 간결한 코드에 많은 도움이 될 것 입니다.
