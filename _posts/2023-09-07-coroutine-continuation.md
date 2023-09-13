@@ -55,7 +55,7 @@ fun postItem(item: Item, cont: Continuation) {
 }
 ~~~
 
-중간에 **State Machine** 인 **sm** 객체를 통해서 연산된 결과를 현재 label 에 해당하는 하위 함수를 호출하고 전달하며 호출이 끝나면 다시 **resume()** 의 호출을 통해 **postItem()** 을 재귀호출하고, 다음 label 의 하위 함수를 호출하는 식으로 하나의 함수 내부에서 연속성을 발생시키고 있는 것을 볼 수 있습니다.
+중간에 **State Machine** 인 `sm` 객체를 통해서 연산된 결과를 현재 label 에 해당하는 하위 함수를 호출하고 전달하며 호출이 끝나면 다시 `resume()` 의 호출을 통해 `postItem()` 을 재귀호출하고, 다음 label 의 하위 함수를 호출하는 식으로 하나의 함수 내부에서 연속성을 발생시키고 있는 것을 볼 수 있습니다.
 
 이러한 방식을 **Continuation Passing Style (CPS)** 라고 합니다.
 
@@ -65,7 +65,7 @@ fun postItem(item: Item, cont: Continuation) {
 
 여기서 스택 프레임은 **State Machine** 과 같은 개념입니다.
 
-정리하면 함수의 호출 결과를 호출자에게 직접 넘기는 것이 아니라 **Continuation** 객체와 같은 **State Machine** 에게 넘기는 동시에 호출 순서를 관리하고, 하위 함수를 순차적으로 호출하는 방식이라고 할 수 있겠습니다.
+정리하면 함수의 호출 결과를 호출자에게 직접 넘기는 것이 아니라 `Continuation` 객체와 같은 **State Machine** 에게 넘기는 동시에 호출 순서를 관리하고, 하위 함수를 순차적으로 호출하는 방식이라고 할 수 있겠습니다.
 
 ## Continuation 의 명시적인 사용
 
@@ -84,8 +84,8 @@ public interface Continuation<in T> {
 }
 ~~~
 
-일반적으로 Continuation 을 명시적으로 사용할 일이 많지 않을 겁니다.  
-하지만 안드로이드에서 **Continuation** 을 명시적으로 사용하고, Callback 루틴을 감싸 코루틴 내부에서 간편하게 사용할 수 있는 몇 가지 예시가 있습니다.
+일반적으로 `Continuation` 을 명시적으로 사용할 일이 많지 않을 겁니다.  
+하지만 안드로이드에서 이를 명시적으로 사용하고, Callback 루틴을 감싸 코루틴 내부에서 간편하게 사용할 수 있는 몇 가지 예시가 있습니다.
 
 ### View#setOnClickListener
 
@@ -105,7 +105,7 @@ lifecycleScope.launch {
 
 클릭 리스너를 **suspendCoroutine** 으로 감싸 코루틴 내부에서 간결하고 순차적인 표현이 가능해집니다.
 
-Continuation 의 확장 함수를 이용하면, Callback 루틴 내부에서 실패가 발생해도 취소가 가능한 방법이 있습니다.
+`Continuation` 의 확장 함수를 이용하면, Callback 루틴 내부에서 실패가 발생해도 취소가 가능한 방법이 있습니다.
 
 ~~~kotlin
 public inline fun <T> Continuation<T>.resume(value: T): Unit = 
@@ -115,7 +115,7 @@ public inline fun <T> Continuation<T>.resumeWithException(exception: Throwable):
     resumeWith(Result.failure(exception))
 ~~~
 
-이 함수들은 **suspendCancellableCoroutine** 를 사용하여 구현이 가능합니다.  
+이 함수들은 `suspendCancellableCoroutine` 를 사용하여 구현이 가능합니다.  
 아래 Chris Banes 의 코드가 가장 설명하기 적합한 예제인 것 같습니다.
 
 ### View#OnLayoutChangeListener (Chris Banes example)
@@ -152,8 +152,8 @@ viewLifecycleOwner.lifecycleScope.launch {
 }
 ~~~
 
-뷰의 크기 확정 시점을 알기 위한 콜백 루틴을 **suspendCancellableCoroutine** 으로 감싸서 간결해졌고, 내부에서 취소가 발생했을 때 OnLayoutChangeListener 의 해제 루틴도 동작하도록 대응이 되었습니다.
+뷰의 크기 확정 시점을 알기 위한 콜백 루틴을 `suspendCancellableCoroutine` 으로 감싸서 간결해졌고, 내부에서 취소가 발생했을 때 `OnLayoutChangeListener` 의 해제 루틴도 동작하도록 대응이 되었습니다.
 
 ## Conclusion
 
-개인적으로 **suspendCancellableCoroutine** 을 자주 활용하는 편이며, 콜백 스타일로 설계된 API 를 코루틴 내부에서 사용할 때 Continuation 을 직접 핸들링 한다면, 간결한 코드에 많은 도움이 될 것 입니다.
+개인적으로 `suspendCancellableCoroutine` 을 자주 활용하는 편이며, 콜백 스타일로 설계된 API 를 코루틴 내부에서 사용할 때 `Continuation` 을 직접 핸들링 한다면, 간결한 코드에 많은 도움이 될 것 입니다.
