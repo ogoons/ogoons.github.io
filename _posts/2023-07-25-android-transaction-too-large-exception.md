@@ -32,7 +32,7 @@ categories: Android
 - WindowManagerService
 - AlarmManagerService
 
-위와 같이 시스템에서 제공되는 서비스 들은 리눅스 커널 레이어에서 서버 프로세스 형태로 제공되며, Binder IPC (Inter-Process Communication) 를 통해 통신하기에, **특정 순간에 이러한 프로세스에서 실행되는 전체 Binder 트랜잭션에 대한 1MB** 를 의미합니다.
+위와 같이 시스템에서 제공되는 서비스 들은 리눅스 커널 레이어에서 서버 프로세스 형태로 제공되며, **Binder IPC (Inter-Process Communication)** 를 통해 통신하기에, **특정 순간에 이러한 프로세스에서 실행되는 전체 Binder 트랜잭션에 대한 1MB** 를 의미합니다.
 
 ## Tracking Binder Transaction
 
@@ -42,6 +42,6 @@ TransactionTooLargeException 예외에 대한 디버깅에 도움을 줄 수 있
 ## Conclusion
 
 프로세스에서 특정 시점에 `Binder` 를 통한 모든 데이터 트랜잭션이 1MB 이상이라면, `Binder` 내부에서 `TransactionTooLargeException` 예외를 발생시킵니다.  
-엄밀히 말하면 1MB 가 맞지만, 다른 작업과 동시에 처리되는 하나의 트랜잭션을 고려할 때 개발자 입장에서 더 작게 데이터를 보내야 하는 것이 정확할 것 입니다.
+엄밀히 말하면 1MB 가 맞지만, 다른 작업과 동시에 처리되는 하나의 트랜잭션을 고려할 때 개발자는 이 보다 더 작게 데이터를 보내야 하는 것이 정확할 것 입니다.
 
 해당 예외로 골치를 썩고 있다면 `Activity`, `Fragment` 간에 `Bundle` 데이터 전달을 ID 만 주고받는 방식으로 리팩터링하거나, 정적 변수를 사용하는 것도 하나의 방법이 될 수 있습니다.

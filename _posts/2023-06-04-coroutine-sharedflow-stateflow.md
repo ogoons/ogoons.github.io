@@ -32,9 +32,9 @@ public fun <T> MutableSharedFlow(
 
 버퍼가 가득찬 경우에 아래 옵션으로 정책을 정할 수 있습니다.
 
-- `BufferOverflow.SUSPEND` : `emit` 이 blocking 됩니다.
-- `BufferOverflow.DROP_LATEST` : 가장 최근 값을 버리고, 새로운 값으로 대체합니다.
-- `BufferOverflow.DROP_OLDEST` : 가장 오래된 값을 버리고, 새로운 값으로 대체합니다.
+- `BufferOverflow.SUSPEND`: `emit` 이 blocking 됩니다.
+- `BufferOverflow.DROP_LATEST`: 가장 최근 값을 버리고, 새로운 값으로 대체합니다.
+- `BufferOverflow.DROP_OLDEST`: 가장 오래된 값을 버리고, 새로운 값으로 대체합니다.
 
 ## StateFlow
 
