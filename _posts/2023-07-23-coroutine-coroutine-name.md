@@ -9,7 +9,7 @@ categories: Coroutine
 ## CoroutineName
 ![CouroutineName Hierarchy]({{ site.url }}/assets/images/2023-07-24-coroutine-name.png)
 
-CoroutineName 의 최상위 부모는 CoroutineContext 이므로 코루틴을 시작하거나 CouroutineScope 를 생성할 때 자유롭게 첨부가 가능합니다.
+`CoroutineName` 의 최상위 부모는 `CoroutineContext` 이므로 코루틴을 시작하거나 `CouroutineScope` 를 생성할 때 자유롭게 첨부가 가능합니다.
 
 ~~~kotlin
 val myScope = CoroutineScope(EmptyCoroutineContext)
