@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ExoPlayer] Preloading and Caching in ExoPlayer"
+title: "[ExoPlayer] Pre-loading and Caching in ExoPlayer"
 categories: ExoPlayer Android 
 ---
 
