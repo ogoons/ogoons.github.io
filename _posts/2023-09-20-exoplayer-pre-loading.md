@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ExoPlayer] Pre-loading video with ExoPlayer
+title: "[ExoPlayer] Pre-loading video with ExoPlayer"
 categories: Android, ExoPlayer
 ---
 
