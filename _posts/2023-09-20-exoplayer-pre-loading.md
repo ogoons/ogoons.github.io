@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[ExoPlayer] Pre-loading video with ExoPlayer"
-categories: Android, ExoPlayer
+categories: Android ExoPlayer
 ---
 
 ExoPlayer 라이브러리에 내장된 관련 API 를 사용하면, 다운로드나 캐시 기능을 추가적으로 구현하지 않고도 간단하게 목적을 달성할 수 있습니다.
