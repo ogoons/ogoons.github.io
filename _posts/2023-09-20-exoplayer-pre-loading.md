@@ -104,7 +104,7 @@ downloader.download { contentLength, bytesDownloaded, percentDownloaded ->
 
 ### ProgressiveDownloader
 
-스트리밍이 아닌 파일 다운로드로 비디오를 가져오기 위한 클래스
+스트리밍이 아닌 파일 다운로드로 비디오를 가져오기 위한 클래스 입니다.
 
 이외에 `SsDownloader`, `DashDownloader`, `HlsDownloader` 등 다양한 형식의 다운로드를 지원하고 있습니다.
 
@@ -112,7 +112,7 @@ downloader.download { contentLength, bytesDownloaded, percentDownloaded ->
 
 `ProgressiveDownloader` 를 사용한 **Pre-loading/cashing** 기법은 개발자가 적절한 전략을 세우고 구현하지 않으면, 오히려 앱의 자원낭비와 전반적인 성능저하를 불러 일으킬 수 있습니다.  
 사용자가 반드시 해당 비디오를 플레이 할 것이라는 보장이 없다면 무조건 적인 다운로드는 통신 데이터 등의 불필요한 자원소비가 발생할 수 있습니다.  
-그렇기 때문에 어떻게 비디오를 미리 캐싱할 것인지에 대한 충분한 전략을 수립하는 것이 무엇보다 중요합니다.
+때문에 어떻게 비디오를 미리 캐싱할 것인지에 대한 충분한 전략을 수립하는 것이 무엇보다 중요합니다.
 
 ## References
 
