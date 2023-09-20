@@ -4,7 +4,7 @@ title: "[ExoPlayer] Preloading and Caching Videos in ExoPlayer"
 categories: ExoPlayer Android 
 ---
 
-ExoPlayer 라이브러리에 내장된 캐시 기능을 구현하고 사전 다운로드 하는 방법을 알아봅니다.  
+ExoPlayer 라이브러리에 내장된 비디오 캐시 기능을 구현하고 사전 로드 하는 방법을 알아봅니다.  
 라이브러리에 내장된 관련 API 를 사용하면, 다운로드나 캐시 기능을 추가적으로 구현하지 않고도 간단하게 목적을 달성할 수 있습니다.
 
 > 이 글은 새로운 Media3 패키지가 아닌 독립 실행형 라이브러리인 `com.google.android.exoplayer:exoplayer:2.18.1` 를 기준으로 작성되었습니다.  
