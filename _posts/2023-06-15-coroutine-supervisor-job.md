@@ -15,24 +15,24 @@ categories: Coroutine
 
 ~~~kotlin
 private val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
-    Log.d("ogoons", throwable.message ?: "")
+    println(thrawable.message ?: "")
 }
 
 private val supervisorJob = SupervisorJob()
 
 fun main() = runBlocking {
     launch(exceptionHandler) {
-        val childJob1 = launch(supervisorJob) {
-            Log.d("ogoons", "Child job 1")
-            throw Exception("Child job 1 - Failed")
+        val firstChildJob = launch(supervisorJob) {
+            println("firstChildJob")
+            throw Exception("firstChildJob - Failed")
         }
-        val childJob2 = launch {
-            Log.d("ogoons", "Child job 2")
+        val secondChildJob = launch {
+            println("secondChildJob")
         }
-        childJob1.join()
-        childJob2.join()
+        firstChildJob.join()
+        secondChildJob.join()
 
-        Log.d("ogoons", "Parent job")
+        println("Parent job")
     }
 }
 ~~~
@@ -40,13 +40,13 @@ fun main() = runBlocking {
 위 코드의 실행 결과는 다음과 같습니다.
 
 ~~~
-Child job 1
-Child job 1 - Failed
-Child job 2
+firstChildJob
+firstChildJob - Failed
+secondChildJob
 Parent job
 ~~~
 
-`Child job 1`` 에서 예외 발생 후, `Child job 2` 와 부모 코루틴의 작업이 취소되지 않고 정상적으로 진행됩니다.
+`firstChildJob` 에서 예외 발생 후, `secondChildJob` 와 부모 코루틴의 작업이 취소되지 않고 정상적으로 진행됩니다.
 
 이러한 특성은 하나의 코루틴 내부에서 복수의 Back-end API 를 호출하여 결과를 보여줘야 하는 경우에 유용할 것입니다.
 하나의 API 호출이 실패해도, 다른 호출 결과가 정상인 경우에도 결과를 보여줘야 하는 경우도 있기 때문입니다.
@@ -69,24 +69,24 @@ supervisorScope {
 
 ~~~kotlin
 private val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
-    Log.d("ogoons", throwable.message ?: "")
+    println(thrawable.message ?: "")
 }
 
 fun main() = runBlocking {
     launch(exceptionHandler) {
-        val childJob1 = supervisorScope {
+        val firstChildJob = supervisorScope {
             launch {
-                Log.d("ogoons", "Child job 1")
-                throw Exception("Child job 1 - Failed")
+            println("firstChildJob")
+            throw Exception("firstChildJob - Failed")
             }
         }
-        val childJob2 = launch {
-            Log.d("ogoons", "Child job 2")
+        val secondChildJob = launch {
+            println("secondChildJob")
         }
-        childJob1.join()
-        childJob2.join()
+        firstChildJob.join()
+        secondChildJob.join()
 
-        Log.d("ogoons", "Parent job")
+        println("Parent job")
     }
 }
 ~~~
@@ -94,9 +94,9 @@ fun main() = runBlocking {
 위 코드의 실행 결과는 다음과 같습니다.
 
 ~~~
-Child job 1
-Child job 1 - Failed
-Child job 2
+firstChildJob
+firstChildJob - Failed
+secondChildJob
 Parent job
 ~~~
 
