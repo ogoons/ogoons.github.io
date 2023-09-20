@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[ExoPlayer] Preloading and Caching in ExoPlayer"
-categories: Android ExoPlayer
+categories: ExoPlayer Android 
 ---
 
 ExoPlayer 라이브러에서 캐시 기능을 구현하고 사전 다운로드 하는 방법을 알아봅니다.  
