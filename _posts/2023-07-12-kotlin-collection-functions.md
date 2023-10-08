@@ -27,7 +27,7 @@ println(group)
 
 ### 결과
 
-`type` 이 `"Sedan"` 과 일치하는 결과만 컬렉션으로 반환합니다.
+`type` 이 `Sedan` 과 일치하는 결과만 컬렉션으로 반환합니다.
 
 ~~~kotlin
 [

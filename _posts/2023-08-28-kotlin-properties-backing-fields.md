@@ -72,10 +72,10 @@ val isEmpty: Boolean
 
 ## Backing Properties
 
-Backing Field 를 사용하면 Getter 와 Setter 범위 내에서만 field 에 접근이 가능합니다.  
+Backing Field 를 사용하면 Getter 와 Setter 범위 내에서만 `field` 에 접근이 가능합니다.  
 하지만 Backing Field 와 접근자 메소드를 사용하지 않는 사례도 있을 수 있습니다.
 
-이러한 경우에 아래 코드와 같이 Backing Property 를 사용하여 원본 데이터를 저장하는 필드(_age)를 별도로 만들고 해당 필드에 직접 접근하도록 해야합니다.  
+이러한 경우에 아래 코드와 같이 Backing Property 를 사용하여 원본 데이터를 저장하는 필드(`_age`)를 별도로 만들고 해당 필드에 직접 접근하도록 해야합니다.  
 자동으로 생성되는 Backing Field 가 굳이 불필요하다면 말입니다.
 
 ~~~kotlin
@@ -91,7 +91,7 @@ class Person {
 }
 ~~~
 
-이러한 방식은 기본 Getter, Setter 를 사용하며 private 프로퍼티인 _age 에 대한 액세스가 최적화 되어 함수 호출에 대한 오버헤드가 발생하지 않으며, Java 와 같은 방식으로 동작하게 됩니다.
+이러한 방식은 기본 Getter, Setter 를 사용하며 `private` 프로퍼티인 `_age` 에 대한 액세스가 최적화 되어 함수 호출에 대한 오버헤드가 발생하지 않으며, Java 와 같은 방식으로 동작하게 됩니다.
 
 하지만!
 
@@ -110,7 +110,7 @@ class Person {
 그럼에도 불구하고 Backing Property 를 사용하는 이유는 무엇일까요?
 아마도 가장 보편적인 이유로는 public 프로퍼티에서 상위 타입을 반환하기 위함일 것 입니다.
 
-가장 좋은 예는 안드로이드 Jetpack 의 LiveData 를 ViewModel 내부에 정의하는 경우입니다.
+가장 좋은 예는 안드로이드 Jetpack 의 `LiveData` 를 `ViewModel` 내부에 정의하는 경우입니다.
 
 ~~~kotlin
 class MyViewModel : ViewModel() {

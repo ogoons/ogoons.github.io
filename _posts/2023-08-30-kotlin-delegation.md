@@ -15,7 +15,7 @@ categories: Kotlin
 우선 소프트웨어 공학에서 다른 클래스 기능의 재사용을 위해 사용하는 두 가지 방법은 다음과 같습니다.
 
 - 상속(Inheritance)
-- 포함 (Composition)
+- 포함(Composition)
 
 상속은 상위 클래스의 기능을 하위 클래스에 가져와 사용할 수 있지만, 상위 클래스에 의존적이게 되고 캡슐화를 무너뜨리는 단점이 있습니다.  
 하지만 포함은 다른 클래스의 객체를 내 클래스에 **포함**하여 다른 클래스의 기능을 그대로 가져올 수 있으며, 상위 클래스에 의존하지 않아도 캡슐화를 유지할 수 있는 장점이 있습니다.  
@@ -131,8 +131,8 @@ lazy() 메소드는 Lazy<> 인터페이스를 구현한 클래스의 객체를 �
 private val viewModel: MyViewModel by viewModels()
 ~~~
 
-Fragment ktx를 사용하면 viewModels() 확장 함수를 사용하여 지연 초기화의 목적을 달성할 수 있습니다.  
-viewModels() 의 내부 구현은 어떠한 지 살펴보도록 하겠습니다.
+Fragment ktx를 사용하면 `viewModels()` 확장 함수를 사용하여 지연 초기화의 목적을 달성할 수 있습니다.  
+`viewModels()` 의 내부 구현은 어떠한 지 살펴보도록 하겠습니다.
 
 ~~~kotlin
 @MainThread
@@ -213,19 +213,19 @@ public class ViewModelLazy<VM : ViewModel> @JvmOverloads constructor(
 }
 ~~~
 
-value 의 getter 를 호출하면 ViewModelProvider 를 통하여 ViewModel 의 인스턴스를 제공받고, cached 프로퍼티에 캐시하고 있음을 알 수 있습니다.  
-싱글톤 패턴의 그것과 비슷하게 구성되어 있으며, Lazy<> 인터페이스를 상속하여 초기화 동작을 직접 구현하는 방식입니다.
+`value` 의 getter 를 호출하면 `ViewModelProvider` 를 통하여 `ViewModel` 의 인스턴스를 제공받고, `cached` 프로퍼티에 캐시하고 있음을 알 수 있습니다.  
+싱글톤 패턴의 그것과 비슷하게 구성되어 있으며, `Lazy<>` 인터페이스를 상속하여 초기화 동작을 직접 구현하는 방식입니다.
 
-앞서 설명한 lazy() 메소드도 구현부를 보면 Lazy<> 인터페이스를 상속한 SynchronizedLazyImpl 객체를 반환하는 방식으로 비슷하게 초기화를 구현하고 있습니다.  
-내부에는 멀티스레딩 환경에 대응할 수 있도록, synchronized 키워드를 사용한 다소 긴 코드를 구현하고 있습니다.
+앞서 설명한 `lazy()` 메소드도 구현부를 보면 `Lazy<>` 인터페이스를 상속한 `SynchronizedLazyImpl` 객체를 반환하는 방식으로 비슷하게 초기화를 구현하고 있습니다.  
+내부에는 멀티스레딩 환경에 대응할 수 있도록, `synchronized` 키워드를 사용한 다소 긴 코드를 구현하고 있습니다.
 
-결론은 이와 같은 패턴으로 객체 초기화에 대한 상용구 코드를 줄일 수 있으며, 복잡한 초기화 동작을 특정 클래스(ViewModelLazy, SynchronizedLazyImpl 등)에게 위임할 수 있는 멋진 설계라 할 수 있습니다.
+결론은 이와 같은 패턴으로 객체 초기화에 대한 상용구 코드를 줄일 수 있으며, 복잡한 초기화 동작을 특정 클래스(`ViewModelLazy`, `SynchronizedLazyImpl` 등)에게 위임할 수 있는 멋진 설계라 할 수 있습니다.
 
 ### Observable
 
-Delegates.observable() 메소드를 사용하면, 프로퍼티에 할당이 발생할 때 핸들러를 호출하도록 구현할 수 있습니다.  
+`Delegates.observable()` 메소드를 사용하면, 프로퍼티에 할당이 발생할 때 핸들러를 호출하도록 구현할 수 있습니다.  
 Jetpack 의 LiveData 와 비슷한 동작을 합니다.
-초기값을 할당할 수 있으며, 핸들러 내부에서 old, new 파라미터를 넘겨받아 원하는 동작을 수행할 수 있습니다.
+초기값을 할당할 수 있으며, 핸들러 내부에서 `old`, `new` 파라미터를 넘겨받아 원하는 동작을 수행할 수 있습니다.
 
 ~~~kotlin
 class User {
@@ -251,7 +251,7 @@ second -> third
 
 ### Vetoable
 
-observable() 과 비슷한 vetoable() 메소드를 사용하면 핸들러에서 반환되는 Boolean 값을 기준으로 값이 할당되었을 때, 저장할 것인지 말지를 결정할 수 있습니다.
+`observable()` 과 비슷한 `vetoable()` 메소드를 사용하면 핸들러에서 반환되는 `Boolean` 값을 기준으로 값이 할당되었을 때, 저장할 것인지 말지를 결정할 수 있습니다.
 
 ~~~kotlin
 var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
@@ -293,7 +293,7 @@ fun main() {
 
 위임된 프로퍼티에서 값을 읽으면 map 에서 값을 가져오게 됩니다.
 
-가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 MutableMap 으로 선언하여 사용하면 가능합니다.
+가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 `MutableMap` 으로 선언하여 사용하면 가능합니다.
 
 ~~~kotlin
 class User(map: MutableMap<String, Any?>) {

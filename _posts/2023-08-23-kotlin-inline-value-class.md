@@ -19,7 +19,7 @@ fun drawRect(width: Int, height: Int)
 함수 호출 코드를 작성하면서 매개변수로 전달한 width, height 를 서로 바꾸어 전달하게될 여지가 있습니다.  
 이러한 문제를 해결해줄 방법으로 우리는 매개변수의 타입을 Primitive 타입이 아닌 고유의 Object 로 전달하면 해결할 수 있을 겁니다.
 
-data class 를 이용하여 Wrapping 한 솔루션은 다음과 같습니다.
+data class 를 이용하여 wrapping 한 솔루션은 다음과 같습니다.
 
 ~~~kotlin
 data class Width(

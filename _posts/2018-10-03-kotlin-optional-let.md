@@ -16,7 +16,7 @@ fun letNullCheck(arg: String?) {
 }
 ```
 
-좀 더 Kotlin 스럽게(?) 한다면 let과 elvis operator를 추가하여 아래와 같이 사용할 수 있습니다.
+좀 더 코틀린스럽게 작성한다면 `let` 과 elvis operator를 추가하여 아래와 같이 사용할 수 있습니다.
 
 ```kotlin
 fun letNullCheck(arg: String?) {
@@ -41,7 +41,7 @@ fun letNullCheck(arg: String?) {
 
 그리고 **arg가 Null 인 경우는 문제가 없지만 NotNull인 경우 NotNull인 경우의 구문과 Null 구문까지 모두 실행해 버립니다.**
 
-이런 경우는 다음과 같이 elvis 연산자 뒤에 let을 붙여줌으로써 구현이 가능합니다.
+이런 경우는 다음과 같이 elvis 연산자 뒤에 `let` 을 붙여줌으로써 구현이 가능합니다.
 
 ```kotlin
 fun letNullCheck(arg: String?) {
