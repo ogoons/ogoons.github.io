@@ -22,10 +22,45 @@ categories: Flow SharedFlow StateFlow
 - 하나의 생산자와 다수의 소비자가 존재합니다.(1:N)
 - 보통 다수의 청취자가 하나의 라디오 주파수를 맞추는 행위와 비유됩니다.
 
+## Flow
+
+코루틴 패키지 내부에 있는 데이터 스트림 구현을 위한 클래스 입니다.  
+**Cold Stream** 이고 `collect()` 시점에 값이 방출되어 내려옵니다.
+
+아래 코드와 같이 Flow builder 를 사용해서 구성할 수 있습니다.
+
+~~~kotlin
+public fun <T> flow(@BuilderInference block: suspend FlowCollector<T>.() -> Unit): Flow<T> = SafeFlow(block)
+~~~
+
+~~~kotlin
+val count = flow {
+    emit(1)
+    emit(2)
+}
+
+runBlocking {
+    count.collect { num ->
+        println(num)
+    }
+}
+~~~
+~~~
+1
+2
+~~~
+
+`LiveData` 와는 달리 단순히 데이터를 흐르게만 할 수 있고 고정하여 사용할 수 없습니다.  
+실무에서 사용한다면 `LiveData` 와 같은 데이터 홀더는 별도로 구성해야 한다는 뜻 입니다.
+
+`Flow` 에서도 데이터 홀더 역할이 가능한 `SharedFlow` 와 `StateFlow` 인터페이스를 준비해놓았습니다. 
+
 ## SharedFlow
 
 `Flow` 를 확장한 인터페이스 입니다.  
-`replay`, `extraBufferCapacity` 등의 파라미터를 지원하여 구독에 대한 정책을 설정할 수 있는 기능을 지원합니다.
+**Hot Stream** 이며 `Flow` 의 데이터 스트림 역할은 물론 데이터를 잠시 저장하는 홀더 역할이 가능합니다.
+
+그리고 추가로 `replay`, `extraBufferCapacity` 등의 파라미터를 지원하여 구독에 대한 정책을 설정할 수 있는 기능을 지원합니다.
 
 ```kotlin
 public fun <T> MutableSharedFlow(
@@ -56,11 +91,18 @@ public fun <T> MutableSharedFlow(
 ## StateFlow
 
 `SharedFlow` 를 확장한 인터페이스 입니다.  
-이름 그대로 구독자에게 상태 데이터를 방출하기 위한 목적으로 만들어졌습니다. 
+**Hot Stream** 이며, 이름 그대로 구독자에게 상태 데이터를 방출하기 위한 목적으로 만들어졌습니다. 
 
-대부분 `SharedFlow` 와 동일하지만 몇 가지 다른 특징이 있습니다.
+데이터 홀더 역할을 비롯한 대부분 `SharedFlow` 와 동일하지만 몇 가지 다른 특징이 있습니다.
 
 1. 초기값을 필요로 합니다.
 2. `SharedFlow` 의 Replay Cache 가 지원되지 않습니다.
 3. `emit()` 호출 시 이미 적재된 데이터의 **중복을 무시(skip)**합니다.
 4. 단 하나의 데이터의 최신 상태만을 유지하고 있습니다.
+
+## Conclusion
+
+`LiveData` 대신 `Flow` 를 권장하는 이유는, `SharedFlow` 를 비롯한 `StateFlow` 를 사용하여 데이터 홀더의 역할도 수행이 가능하고, 방출되는 데이터를 flow 안에서 `zip()`, `map()`, `filter()` 등의 다양한 확장 함수로 가공할 수 있는 것이 참 편리하기 때문입니다.  
+게다가 단점인 수명주기를 인식하지 못하는 부분도 `flowWithLifecycle()` 등의 확장 함수를 통해 보완이 가능한 이유도 있습니다.
+
+하지만 단순 데이터 홀더 역할의 관점에서 생각하면 `LiveData` 의 사용 방식이 더욱 간편하고, 상용구 코드를 간소화 할 수 있다는 점에서는 장점이기에 상황에 따라 적절히 사용하면 좋을 것 같습니다.
