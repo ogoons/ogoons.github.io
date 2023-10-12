@@ -24,7 +24,7 @@ categories: Flow SharedFlow StateFlow
 
 ## SharedFlow
 
-`Flow` 를 확장한 인터페이스 입니다.
+`Flow` 를 확장한 인터페이스 입니다.  
 `replay`, `extraBufferCapacity` 등의 파라미터를 지원하여 구독에 대한 정책을 설정할 수 있는 기능을 지원합니다.
 
 ```kotlin
@@ -55,11 +55,12 @@ public fun <T> MutableSharedFlow(
 
 ## StateFlow
 
-`SharedFlow` 를 확장한 인터페이스 입니다.
-
+`SharedFlow` 를 확장한 인터페이스 입니다.  
 이름 그대로 구독자에게 상태 데이터를 방출하기 위한 목적으로 만들어졌습니다. 
+
+대부분 `SharedFlow` 와 동일하지만 몇 가지 다른 특징이 있습니다.
 
 1. 초기값을 필요로 합니다.
 2. `SharedFlow` 의 Replay Cache 가 지원되지 않습니다.
-3. 중복된 데이터를 무시합니다.
+3. `emit()` 호출 시 이미 적재된 데이터의 **중복을 무시(skip)**합니다.
 4. 단 하나의 데이터의 최신 상태만을 유지하고 있습니다.
