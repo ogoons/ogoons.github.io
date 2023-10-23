@@ -81,12 +81,12 @@ fun main() {
 }
 ~~~
 
-핵심은 **by** 키워드 입니다.  
-Example 클래스 내에 String 타입의 프로퍼티를 선언하고 by 키워드를 통해 프로퍼티에 대한 기능을 Delegate 클래스에 위임하였습니다.
-Delegate 클래스를 살펴보면 getValue(), setValue() 메소드가 **operator** 키워드를 통해 연산자 오버로딩 되어 있는 것을 확인할 수 있습니다.  
-여기서 눈치챌 수 있는 건, Delegate 클래스에서 String 클래스의 읽기와 쓰기 기능을 새로 구현하겠다는 것을 알 수 있습니다.
+핵심은 `by` 키워드 입니다.  
+`Example` 클래스 내에 String 타입의 프로퍼티를 선언하고 `by` 키워드를 통해 프로퍼티에 대한 기능을 `Delegate` 클래스에 위임하였습니다.
+Delegate 클래스를 살펴보면 `getValue()`, `setValue()` 메소드가 `operator` 키워드를 통해 연산자 오버로딩 되어 있는 것을 확인할 수 있습니다.  
+여기서 눈치챌 수 있는 건, `Delegate` 클래스에서 `String` 클래스의 읽기와 쓰기 기능을 새로 구현하겠다는 것을 알 수 있습니다.
 
-코드를 실행해보면 delegatedProperty 에 값을 할당하는 경우 Delegate 클래스의 setValue() 메소드가 호출되고, 값을 읽어들이면 getValue() 메소드가 호출되는 것을 확인할 수 있습니다.
+코드를 실행해보면 `delegatedProperty` 에 값을 할당하는 경우 `Delegate` 클래스의 `setValue()` 메소드가 호출되고, 값을 읽어들이면 `getValue()` 메소드가 호출되는 것을 확인할 수 있습니다.
 
 **결과**
 
@@ -101,8 +101,8 @@ Hello, getValue()
 
 ### Lazy
 
-lazy() 메소드를 사용하여 프로퍼티의 초기화를 위임할 수 있으며, 프로퍼티의 최초 참조 시 람다식에 구현된 코드를 실행하여 결과 값을 기억한 뒤 추후 참조 시에는 기억된 값만 가져오는 식으로 동작합니다.  
-lazy() 메소드는 프로퍼티의 초기화를 최초 참조하는 시점으로 지연시켜 효율적인 메모리 사용을 도와줍니다.
+`lazy()` 메소드를 사용하여 프로퍼티의 초기화를 위임할 수 있으며, 프로퍼티의 최초 참조 시 람다식에 구현된 코드를 실행하여 결과 값을 기억한 뒤 추후 참조 시에는 기억된 값만 가져오는 식으로 동작합니다.  
+`lazy()` 메소드는 프로퍼티의 초기화를 최초 참조하는 시점으로 지연시켜 효율적인 메모리 사용을 도와줍니다.
 
 ~~~kotlin
 val lazyValue: String by lazy {
@@ -123,7 +123,7 @@ Hello           // 최초 참조의 결과 값
 Hello           // 두 번째 참조의 결과 값
 ~~~
 
-lazy() 메소드는 Lazy<> 인터페이스를 구현한 클래스의 객체를 반환하고 있는데, **Lazy<> 인터페이스**에 대해서 알아보겠습니다.
+`lazy()` 메소드는 `Lazy<>` 인터페이스를 구현한 클래스의 객체를 반환하고 있는데, `Lazy<>` 인터페이스에 대해서 알아보겠습니다.
 
 안드로이드 개발에서 우리는 Fragment 내부 특정 프로퍼티에 ViewModel 초기화를 위한 아래와 같은 코드를 많이 접해보았을 것입니다.
 
@@ -157,8 +157,8 @@ public inline fun <reified VM : ViewModel> Fragment.viewModels(
 }
 ~~~
 
-최종적으로 createViewModelLazy() 를 호출하고 있음을 확인할 수 있습니다.  
-createViewModelLazy() 메소드의 구현을 들어가 봅니다.
+최종적으로 `createViewModelLazy()` 를 호출하고 있음을 확인할 수 있습니다.  
+`createViewModelLazy()` 메소드의 구현을 들어가 봅니다.
 
 ~~~kotlin
 @MainThread
@@ -251,7 +251,7 @@ second -> third
 
 ### Vetoable
 
-`observable()` 과 비슷한 `vetoable()` 메소드를 사용하면 핸들러에서 반환되는 `Boolean` 값을 기준으로 값이 할당되었을 때, 저장할 것인지 말지를 결정할 수 있습니다.
+`observable()` 과 비슷한 `vetoable()` 메소드를 사용하면 핸들러에서 반환되는 Boolean 값을 기준으로 값이 할당되었을 때, 저장할 것인지 말지를 결정할 수 있습니다.
 
 ~~~kotlin
 var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
@@ -291,9 +291,9 @@ fun main() {
 }
 ~~~
 
-위임된 프로퍼티에서 값을 읽으면 map 에서 값을 가져오게 됩니다.
+위임된 프로퍼티에서 값을 읽으면 `map` 에서 값을 가져오게 됩니다.
 
-가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 `MutableMap` 으로 선언하여 사용하면 가능합니다.
+가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 MutableMap 으로 선언하여 사용하면 가능합니다.
 
 ~~~kotlin
 class User(map: MutableMap<String, Any?>) {
