@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: "[Kotlin] sealed class and sealed interface"
 categories: Kotlin
