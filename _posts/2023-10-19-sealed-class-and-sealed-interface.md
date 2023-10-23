@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kotlin] sealed class and sealed interface"
+title: "[Kotlin] Sealed Class and Sealed Interface"
 categories: Kotlin
 ---
 
