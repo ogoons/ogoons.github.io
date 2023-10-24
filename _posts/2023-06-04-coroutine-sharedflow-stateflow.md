@@ -102,7 +102,8 @@ public fun <T> MutableSharedFlow(
 
 ## Conclusion
 
-`LiveData` 대신 `Flow` 를 권장하는 이유는, `SharedFlow` 를 비롯한 `StateFlow` 를 사용하여 데이터 홀더의 역할도 수행이 가능하고, 방출되는 데이터를 flow 안에서 `zip()`, `map()`, `filter()` 등의 다양한 확장 함수로 가공할 수 있는 것이 참 편리하기 때문입니다.  
-게다가 단점인 수명주기를 인식하지 못하는 부분도 `flowWithLifecycle()` 등의 확장 함수를 통해 보완이 가능한 이유도 있습니다.
+`LiveData` 대신 `Flow` 를 권장하는 이유는, `SharedFlow` 를 비롯한 `StateFlow` 를 사용하여 데이터 홀더의 역할도 수행이 가능합니다.  
+게다가 방출되는 데이터를 flow 안에서 `zip()`, `map()`, `filter()` 등의 다양한 확장 함수로 Method Chaining 하여 가공할 수 있는 것이 참 편리하기 때문입니다.  
+단점인 수명주기를 인식하지 못하는 부분도 `flowWithLifecycle()` 등의 확장 함수를 통해 보완이 가능한 이유도 있습니다.
 
 하지만 단순 데이터 홀더 역할의 관점에서 생각하면 `LiveData` 의 사용 방식이 더욱 간편하고, 상용구 코드를 간소화 할 수 있다는 점에서는 장점이기에 상황에 따라 적절히 사용하면 좋을 것 같습니다.

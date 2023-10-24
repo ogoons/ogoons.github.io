@@ -75,7 +75,7 @@ uiState = UiState.Error.NetworkError(Exception()) // OK
 `sealed interface` 는 코틀린 1.5에서 등장하였습니다.  
 하나의 `sealed class` 만 상속할 수 있는 계층적 한계를 극복하기 위해서 추가되었습니다.
 
-하나의 예로 라이브러리에서 Error 를 모델링할 때 계층화하여 설계할 수 있습니다.
+대표적인 예로 라이브러리에서 Error 를 모델링할 때 계층화하여 설계할 수 있습니다. ([코틀린 공식 문서](https://kotlinlang.org/docs/sealed-classes.html#location-of-direct-subclasses))
 
 ~~~kotlin
 sealed interface Error
@@ -88,7 +88,7 @@ class DatabaseError(val source: DataSource): IOError()
 object RuntimeError : Error
 ~~~
 
-적합한 사용 사례는 네트워크 통신 API에서 발생하는 Error 타입을 계층 구조로 설계하여 세분화 할 수 있습니다.
+또 다른 비슷한 사용 사례로 네트워크 통신 API에서 발생하는 Error 타입을 계층 구조로 설계하여 세분화 할 수 있습니다.
 
 ~~~kotlin
 sealed interface LoginError {
