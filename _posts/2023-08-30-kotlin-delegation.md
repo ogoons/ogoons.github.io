@@ -9,10 +9,10 @@ categories: Kotlin
 
 ## Delegation
 
-앞서 언급한 Delegation Pattern(위임 패턴) 에 대해서 간단하게 짚고 넘어갈 필요가 있습니다.
+앞서 언급한 **Delegation Pattern(위임 패턴)** 에 대해서 간단하게 짚고 넘어갈 필요가 있습니다.
 위임 패턴은 클래스를 상속받지 않고, 다른 클래스의 재사용할 수 있도록 해주는 디자인 패턴 중에 하나 입니다.
 
-우선 소프트웨어 공학에서 다른 클래스 기능의 재사용을 위해 사용하는 두 가지 방법은 다음과 같습니다.
+우선 소프트웨어 공학에서 다른 클래스 기능의 재사용을 위해 사용하는 방법은 다음과 같습니다.
 
 - 상속(Inheritance)
 - 포함(Composition)
@@ -176,9 +176,9 @@ public fun <VM : ViewModel> Fragment.createViewModelLazy(
 }
 ~~~
 
-단순히 Lazy<> 인터페이스를 구현한 ViewModelLazy 클래스의 객체를 최종 반환해주는 것을 확인할 수 있습니다.  
+단순히 `Lazy<>` 인터페이스를 구현한 `ViewModelLazy` 클래스의 객체를 최종 반환해주는 것을 확인할 수 있습니다.  
 여기까지 보았을 때, 지연 초기화의 목적을 달성하기엔 힘들어 보입니다.  
-그렇다면 ViewModelLazy 구현도 살펴봅니다.
+그렇다면 `ViewModelLazy` 구현도 살펴봅니다.
 
 ~~~kotlin
 public class ViewModelLazy<VM : ViewModel> @JvmOverloads constructor(
@@ -293,7 +293,7 @@ fun main() {
 
 위임된 프로퍼티에서 값을 읽으면 `map` 에서 값을 가져오게 됩니다.
 
-가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 MutableMap 으로 선언하여 사용하면 가능합니다.
+가변 프로퍼티에 위임하고 싶다면 프로퍼티를 가변으로 설정 후 `MutableMap` 으로 선언하여 사용하면 가능합니다.
 
 ~~~kotlin
 class User(map: MutableMap<String, Any?>) {
