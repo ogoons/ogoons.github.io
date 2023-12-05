@@ -254,15 +254,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
 
 DEPENDENCIES
   github-pages
-  jekyll-feed (~> 0.12)
-  jekyll-sitemap
   plainwhite
-  tzinfo (~> 1.2)
-  tzinfo-data
-  wdm (~> 0.1.1)
   webrick (~> 1.8)
 
 BUNDLED WITH
