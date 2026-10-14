@@ -275,21 +275,43 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
-.post .download-button,
-.post .download-button:hover {
-  display: inline-block;
-  margin: 8px 8px 8px 0;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border-bottom: none;
+.post .download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0 8px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
   background-color: $linkColor;
+  box-shadow: 0 4px 12px rgba(10, 89, 176, 0.3);
   color: #fff;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 .post .download-button:hover {
   background-color: #084a91;
+  border-bottom: none;
+  box-shadow: 0 6px 16px rgba(10, 89, 176, 0.4);
+  transform: translateY(-1px);
+  color: #fff;
+}
+.post .app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 28px;
+  h2 {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+  .app-icon {
+    margin: 0;
+  }
 }
 .post .app-icon {
   display: block;

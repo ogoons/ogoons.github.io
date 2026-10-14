@@ -11,9 +11,10 @@ permalink: /apps/
 
 ---
 
+<div class="app-header">
 <img class="app-icon" src="{{ "/assets/images/algo-icon.png" | relative_url }}" alt="알고 앱 아이콘" width="72" height="72">
-
-## 알고 · 자동화 앱 🤖
+<h2>알고 · 자동화 앱 🤖</h2>
+</div>
 
 > "이럴 땐 이렇게 해줘"를 직접 만들어 보세요.
 
@@ -40,13 +41,14 @@ permalink: /apps/
 - 루틴 개수에 제한이 있어요. 프리미엄으로 업그레이드하면 더 많이 만들 수 있어요.
 - 기능에 따라 위치, 블루투스, 알림, 시스템 설정 같은 권한을 요청해요. 필요한 권한만 허용하면 돼요.
 
-<a class="download-button" href="https://play.google.com/store/apps/details?id=com.ogoons.algo" target="_blank">알고 다운로드</a>
+<a class="download-button" href="https://play.google.com/store/apps/details?id=com.ogoons.algo" target="_blank">다운로드 하러가기</a>
 
 ---
 
+<div class="app-header">
 <img class="app-icon" src="{{ "/assets/images/halo-icon.png" | relative_url }}" alt="HALO 앱 아이콘" width="72" height="72">
-
-## HALO · 밤에 쉬는 눈 🌙
+<h2>HALO · 밤에 쉬는 눈 🌙</h2>
+</div>
 
 > 자기 전에 폰을 보는 습관이 있다면, HALO가 눈을 편하게 해 줘요.
 
@@ -74,7 +76,7 @@ HALO는 화면 위에 따뜻한 색의 필터를 얹어서 눈부심을 줄여 �
 - 화면 필터는 접근성 서비스를 사용해요. 화면 내용은 읽지 않고 필터만 씌워요.
 - 집 위치를 쓰는 기능은 위치 권한이 필요해요. 권한을 허용하지 않아도 필터 자체는 동작해요.
 
-<a class="download-button" href="https://play.google.com/store/apps/details?id=com.ogoons.halo" target="_blank">HALO 다운로드</a>
+<a class="download-button" href="https://play.google.com/store/apps/details?id=com.ogoons.halo" target="_blank">다운로드 하러가기</a>
 
 ---
 
