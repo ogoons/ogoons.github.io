@@ -86,6 +86,9 @@
 	.post a:hover {
 		border-bottom-color: #aaa;
 	}
+	.post .app-icon {
+		filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.35));
+	}
 	.post .hue-badge {
 		background-color: #f1f1f1;
 		img {
