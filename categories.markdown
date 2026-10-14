@@ -11,12 +11,3 @@ title: 카테고리
   {% for c in cats %}{% assign s = c[0] | slugify %}<li style="list-style: none;"><a href="{{ '/category/' | append: s | append: '/' | relative_url }}">{{ c[0] }}</a> <span>({{ c[1] | size }})</span></li>
   {% endfor %}</ul>
 </div>
-
-<script>
-  if (window.innerWidth <= 768) {
-    history.scrollRestoration = 'manual';
-    window.addEventListener('load', function () {
-      document.querySelector('.post-container').scrollIntoView({ block: 'start' });
-    });
-  }
-</script>
