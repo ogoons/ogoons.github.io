@@ -86,6 +86,18 @@
 	.post a:hover {
 		border-bottom-color: #aaa;
 	}
+	.post .hue-badge {
+		background-color: #f1f1f1;
+		img {
+			background-color: transparent;
+		}
+		img.hue-white {
+			display: none;
+		}
+		img.hue-black {
+			display: block;
+		}
+	}
 	#title a {
 		color: #fff;
 		&:hover {

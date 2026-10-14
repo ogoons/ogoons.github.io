@@ -275,6 +275,44 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
+.post .download-button,
+.post .download-button:hover {
+  display: inline-block;
+  margin: 8px 8px 8px 0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border-bottom: none;
+  background-color: $linkColor;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.post .download-button:hover {
+  background-color: #084a91;
+}
+.post .app-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 20px 0 12px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+.post .hue-badge {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 10px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  img {
+    display: block;
+    height: 36px;
+    width: auto;
+  }
+  img.hue-black {
+    display: none;
+  }
+}
 .posts-labelgroup {
   margin: 0 0 0.67em 0;
   display: flex;
