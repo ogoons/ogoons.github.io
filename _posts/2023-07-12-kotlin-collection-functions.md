@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] Collection Functions"
 categories: Kotlin
+description: "filter 등 Kotlin 컬렉션 확장 함수의 사용법을 예제와 함께 정리합니다."
 ---
 
 코틀린 컬렉션 확장 함수들을 알아봅니다. 필드에서 생각보다 많이 사용하므로 숙지해놓으면 좋습니다.

@@ -2,6 +2,7 @@
 layout: post
 title: "[Coroutine] CoroutineName 을 활용한 디버깅"
 categories: Coroutine
+description: "CoroutineName 으로 실행 중인 코루틴에 이름을 붙이고 확인하는 방법을 알아봅니다."
 ---
 
 코루틴을 활용한 비동기 프로그래밍을 하다보면, 현재 실행 중인 코루틴의 이름을 알고 싶은 경우가 있습니다.

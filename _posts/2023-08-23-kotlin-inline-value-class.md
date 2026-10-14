@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] inline(value) class"
 categories: Kotlin
+description: "Kotlin inline class(value class)가 필요한 이유와 사용 방법을 예제와 함께 알아봅니다."
 ---
 
 코틀린의 inline class 에 대해서 알아봅니다.

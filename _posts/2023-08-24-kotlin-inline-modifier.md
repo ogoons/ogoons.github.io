@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] inline 수정자에 대하여 알아보기"
 categories: Kotlin
+description: "inline 수정자가 고차 함수의 오버헤드를 줄이는 원리와 관련 키워드를 정리합니다."
 ---
 
 `inline` 수정자와 이와 관계되는 다양한 키워드에 대해 정리해봅니다.

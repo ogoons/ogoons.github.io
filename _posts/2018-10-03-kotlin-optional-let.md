@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] optional + let을 통한 null 체크"
 categories: Kotlin
+description: "null 체크 코드를 let 함수로 간결하게 바꾸는 방법을 알아봅니다."
 ---
 
 우리는 보통 null 체크하는 로직을 아래와 같이 구현합니다.

@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] Generics 파헤치기 Part 2 - 변성(Variance)과 in, out 한정자"
 categories: Kotlin
+description: "제네릭 변성(Variance)과 in, out 한정자의 의미를 정리합니다."
 ---
 
 코틀린의 제네릭 프로그래밍 방식에 대해서 파헤쳐보기 두 번째 시간입니다.

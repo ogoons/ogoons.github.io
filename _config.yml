@@ -1,8 +1,9 @@
 title: 담백로그
+lang: ko
 author: OGOONS
 email: ogoons@hanmail.net
 description: > # this means to ignore newlines until "show_exerpts:"
-  No comments
+  안드로이드 개발 노트와 직접 만든 앱 소개
 show_excerpts: true # set to true to show excerpts on the homepage
 permalink: /:title
 url: "https://ogoons.github.io"
@@ -19,7 +20,7 @@ plainwhite:
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "assets/ogoons.png" # the path from the base directory of the site to the image to display (no / at the start)
-  html_lang: "kr" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
+  html_lang: "ko" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
   disqus_shortname: ogoons
   condensed_mobile:
     - home
@@ -62,4 +63,10 @@ remote_theme: samarsault/plainwhite-jekyll
 
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/sns-share.png"

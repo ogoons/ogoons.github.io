@@ -2,6 +2,7 @@
 layout: post
 title: "[Coroutine] 코루틴 동시성(Concurrency) 제어"
 categories: Coroutine
+description: "스레드의 @Synchronized 대신 코루틴에서 임계구역을 제어하는 방법을 살펴봅니다."
 ---
 
 코루틴만의 동시성 제어 방식에 대하여 살펴봅니다.

@@ -2,6 +2,7 @@
 layout: post
 title: "[Apps] 제가 만든 앱 소개: 알고와 HALO"
 categories: Apps
+image: "/assets/images/algo-icon.png"
 ---
 
 안녕하세요! 일상을 조금 더 편하게 만들어 주는 안드로이드 전용 앱 두 개를 만들고 있어요.

@@ -2,6 +2,7 @@
 layout: post
 title: "[Coroutine] 코루틴의 Continuation 과 동작 원리"
 categories: Coroutine
+description: "코루틴의 Continuation 과 suspend 함수가 내부에서 동작하는 원리를 알아봅니다."
 ---
 
 코루틴의 Continuation 은 무엇이며 suspend 함수는 내부적으로 어떻게 동작하는 지 알아보자

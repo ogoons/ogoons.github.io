@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] 함수형 프로그래밍 (Functional Programming)"
 categories: Kotlin
+description: "일급 함수 등 Kotlin 함수형 프로그래밍 문법을 예제 코드와 함께 정리합니다."
 ---
 
 코틀린의 함수형 프로그래밍 문법을 기록하고자 글을 작성합니다.

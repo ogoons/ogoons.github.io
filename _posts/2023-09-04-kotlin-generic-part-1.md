@@ -2,6 +2,7 @@
 layout: post
 title: "[Kotlin] Generics 파헤치기 Part 1 - 정의, 타입 매개변수 제약"
 categories: Kotlin
+description: "Kotlin 제네릭의 개념과 클래스에서 타입을 일반화해 쓰는 방법을 알아봅니다."
 ---
 
 코틀린의 제네릭 프로그래밍 방식에 대해서 파헤쳐보기 첫 번째 시간입니다.
