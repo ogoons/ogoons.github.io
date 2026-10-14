@@ -225,6 +225,7 @@ main {
 
 .post-title {
   line-height: 1.2em;
+  overflow-wrap: anywhere;
   font-size: 28px;
   margin-bottom: 10px;
 }
@@ -246,6 +247,7 @@ main {
 }
 .post {
   // font-family: "Merriweather", sans-serif;
+  overflow-wrap: break-word;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   color: #222;
@@ -274,6 +276,10 @@ main {
   h6 {
     font-family: Raleway, sans-serif;
   }
+}
+.post p code,
+.post li code {
+  overflow-wrap: anywhere;
 }
 .post .download-button {
   display: inline-flex;
