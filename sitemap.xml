@@ -21,5 +21,14 @@ layout: null
                 <priority>0.80</priority>
             </url>
         {%- endfor -%}
+        {%- for page in site.pages -%}
+            {%- if page.layout == 'category' or page.path == 'categories.markdown' -%}
+            <url>
+                <loc>{{ site.url }}{{ page.url }}</loc>
+                <changefreq>weekly</changefreq>
+                <priority>0.60</priority>
+            </url>
+            {%- endif -%}
+        {%- endfor -%}
     </urlset>    
 {%- endif -%}

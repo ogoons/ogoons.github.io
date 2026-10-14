@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="post-container">
+  <h1 class="post-title category-title">{{ page.title | escape }}</h1>
+  <ul class="category-posts">
+    {%- assign posts = site.categories[page.category] | sort: "date" | reverse -%}
+    {%- for post in posts -%}
+      <li>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <h2 class="post-title">{{ post.title | escape }}</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: "%Y-%m-%d" }}</div>
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
