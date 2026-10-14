@@ -17,3 +17,11 @@ layout: default
     {%- endfor -%}
   </ul>
 </div>
+<script>
+  if (window.innerWidth <= 768) {
+    history.scrollRestoration = 'manual';
+    window.addEventListener('load', function () {
+      document.querySelector('.post-container').scrollIntoView({ block: 'start' });
+    });
+  }
+</script>
