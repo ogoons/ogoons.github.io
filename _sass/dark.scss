@@ -52,7 +52,7 @@
 
 	.post-categories {
 		li {
-			background-color: #333;
+			background-color: transparent;
 			color: #fff;
 		}
 	}
@@ -86,8 +86,14 @@
 	.post a:hover {
 		border-bottom-color: #aaa;
 	}
-	.post-categories a {
+	.post-categories a,
+	.post-categories a:hover,
+	.post-categories a:focus,
+	.post-categories a:active {
 		background-color: transparent;
+		text-decoration: none;
+		border-bottom: none;
+		color: #fff;
 	}
 	.post .app-icon {
 		background-color: transparent;
