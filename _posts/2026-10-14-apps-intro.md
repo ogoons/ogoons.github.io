@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Apps] 제가 만든 앱 소개: 알고와 HALO"
+title: "[Apps] 직접 만든 앱 알고와 HALO 를 소개합니다."
 categories: Apps
 image: "/assets/images/algo-icon.png"
 ---
@@ -79,7 +79,7 @@ HALO는 화면 위에 따뜻한 색의 필터를 얹어서 눈부심을 줄여 �
 
 ---
 
-## 알고 × HALO · 함께 쓰면 더 편해요 🔗
+## 알고 × HALO · 함께 쓰면 더 편해요
 
 > 알고 루틴에서 HALO의 야간 모드를 직접 조종할 수 있어요.
 
