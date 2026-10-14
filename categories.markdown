@@ -8,6 +8,6 @@ title: 카테고리
   <h1 class="post-title category-title">카테고리</h1>
   {% assign cats = site.categories | sort %}
   <ul class="category-list" style="list-style: none; margin: 0; padding: 0;">
-  {% for c in cats %}{% assign s = c[0] | slugify %}<li><a href="{{ '/category/' | append: s | append: '/' | relative_url }}">{{ c[0] }}</a> <span>({{ c[1] | size }})</span></li>
+  {% for c in cats %}{% assign s = c[0] | slugify %}<li style="list-style: none;"><a href="{{ '/category/' | append: s | append: '/' | relative_url }}">{{ c[0] }}</a> <span>({{ c[1] | size }})</span></li>
   {% endfor %}</ul>
 </div>

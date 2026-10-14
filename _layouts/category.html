@@ -3,10 +3,10 @@ layout: default
 ---
 <div class="post-container">
   <h1 class="post-title category-title">{{ page.title | escape }}</h1>
-  <ul class="category-posts">
+  <ul class="category-posts" style="list-style: none; margin: 0; padding: 0;">
     {%- assign posts = site.categories[page.category] | sort: "date" | reverse -%}
     {%- for post in posts -%}
-      <li>
+      <li style="list-style: none;">
         <a class="post-link" href="{{ post.url | relative_url }}">
           <h2 class="post-title">{{ post.title | escape }}</h2>
         </a>
