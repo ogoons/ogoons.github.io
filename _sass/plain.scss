@@ -2,9 +2,6 @@
 @import "ext/normalize";
 @import "syntax";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
 $linkColor: #0a59b0;
 $mobileW: 768px;
 $smallMobileW: 480px;
@@ -197,7 +194,7 @@ main {
     float: left;
     background-color: #e3e3e3;
     padding: 5px 20px;
-    border-radius: 2px;
+    border-radius: 8px;
     @media screen and (max-width: $mobileW) {
       margin-top: 5px;
     }
