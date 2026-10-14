@@ -13,7 +13,7 @@ permalink: /apps/
 
 <div class="app-header">
 <img class="app-icon" src="{{ "/assets/images/algo-icon.png" | relative_url }}" alt="알고 앱 아이콘" width="72" height="72">
-<h2>알고 · 자동화 앱 🤖</h2>
+<h2>알고 · 자동화 앱</h2>
 </div>
 
 > "이럴 땐 이렇게 해줘"를 직접 만들어 보세요.
@@ -47,7 +47,7 @@ permalink: /apps/
 
 <div class="app-header">
 <img class="app-icon" src="{{ "/assets/images/halo-icon.png" | relative_url }}" alt="HALO 앱 아이콘" width="72" height="72">
-<h2>HALO · 밤에 쉬는 눈 🌙</h2>
+<h2>HALO · 밤에 쉬는 눈</h2>
 </div>
 
 > 자기 전에 폰을 보는 습관이 있다면, HALO가 눈을 편하게 해 줘요.

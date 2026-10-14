@@ -319,27 +319,24 @@ main {
   overflow-wrap: anywhere;
 }
 .post .download-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 32px 0 8px;
-  padding: 14px 28px;
+  display: inline-block;
+  margin: 24px 0 8px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 10px;
-  background-color: $linkColor;
-  box-shadow: 0 4px 12px rgba(10, 89, 176, 0.3);
+  border-radius: 12px;
+  background-color: #2a6fc4;
   color: #fff;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
-.post .download-button:hover {
-  background-color: #084a91;
+.post .download-button:hover,
+.post .download-button:focus,
+.post .download-button:active {
+  background-color: #2a6fc4;
   border-bottom: none;
-  box-shadow: 0 6px 16px rgba(10, 89, 176, 0.4);
-  transform: translateY(-1px);
   color: #fff;
+  text-decoration: none;
 }
 .post .app-header {
   display: flex;
