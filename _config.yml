@@ -3,7 +3,7 @@ lang: ko
 author: OGOONS
 email: ogoons@hanmail.net
 description: > # this means to ignore newlines until "show_exerpts:"
-  안드로이드 개발 노트와 직접 만든 앱 소개
+  인디 개발자의 담백한 개발 로그
 show_excerpts: true # set to true to show excerpts on the homepage
 permalink: /:title
 url: "https://ogoons.github.io"
