@@ -9,7 +9,7 @@ categories: Apps
 
 ---
 
-<img class="app-icon" src="{{ "/assets/images/algo-icon.png" | relative_url }}" alt="알고 앱 아이콘">
+<img class="app-icon" src="{{ "/assets/images/algo-icon.png" | relative_url }}" alt="알고 앱 아이콘" width="72" height="72">
 
 ## 알고 · 자동화 앱 🤖
 
@@ -42,7 +42,7 @@ categories: Apps
 
 ---
 
-<img class="app-icon" src="{{ "/assets/images/halo-icon.png" | relative_url }}" alt="HALO 앱 아이콘">
+<img class="app-icon" src="{{ "/assets/images/halo-icon.png" | relative_url }}" alt="HALO 앱 아이콘" width="72" height="72">
 
 ## HALO · 밤에 쉬는 눈 🌙
 
