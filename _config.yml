@@ -2,8 +2,7 @@ title: 담백로그
 lang: ko
 author: OGOONS
 email: ogoons@hanmail.net
-description: > # this means to ignore newlines until "show_exerpts:"
-  인디 개발자의 담백한 개발 로그
+description: thinking and building
 show_excerpts: true # set to true to show excerpts on the homepage
 permalink: /:title
 url: "https://ogoons.github.io"
@@ -14,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: OGOONS
-  tagline: 담백로그
+  tagline: "담백로그\n<span style=\"font-size: 16px\">thinking and building</span>"
   date_format: "%Y-%m-%d"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
