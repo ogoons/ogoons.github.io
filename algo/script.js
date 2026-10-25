@@ -48,7 +48,7 @@
     languageButton.lang = locale === 'ko' ? 'en' : 'ko';
     choices.setAttribute('aria-label', locale === 'ko' ? '자동화 사용 사례' : 'Automation examples');
     document.querySelector('nav').setAttribute('aria-label', locale === 'ko' ? '주요 메뉴' : 'Main navigation');
-    document.title = locale === 'ko' ? '알고 ALGO — 나만의 루틴, 알아서 착착.' : 'ALGO — Your routine. On autopilot.';
+    document.title = locale === 'ko' ? '알고 ALGO - 나만의 루틴, 알아서 착착.' : 'ALGO - Your routine. On autopilot.';
     const description = locale === 'ko'
       ? '기기 설정, NFC, 내비게이션, 스마트 조명. 안드로이드의 반복 작업을 알고로 자동화하세요. Google Play에서 무료로 시작하세요.'
       : 'Automate device settings, NFC, navigation and smart lights on your Android. Create your own routines with ALGO. Start free on Google Play.';

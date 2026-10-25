@@ -194,7 +194,7 @@ summary::-webkit-details-marker { display: none; }
   .closing-grid { grid-template-columns: 1fr; gap: 24px; }
   .closing h2 { font-size: 36px; }
   .closing p { margin-block: 28px; }
-  .closing-grid > img { width: 100%; max-width: 440px; margin: 0; }
+  .closing-grid > img { width: 72%; max-width: 280px; margin: 0; }
   .footer { padding-block: 40px 28px; }
   .footer-top { align-items: flex-start; flex-direction: column; gap: 28px; }
   .footer-top > div { flex-direction: column; gap: 4px; }
