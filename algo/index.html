@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>알고 ALGO — 나만의 루틴, 알아서 착착.</title>
+  <meta name="description" content="기기 설정, NFC, 내비게이션, 스마트 조명. 안드로이드의 반복 작업을 알고로 자동화하세요. Google Play에서 무료로 시작하세요.">
+  <meta name="theme-color" content="#2962ff">
+  <link rel="canonical" href="https://ogoons.github.io/algo/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="알고 ALGO — 나만의 루틴, 알아서 착착.">
+  <meta property="og:description" content="기기 설정부터 NFC, 내비게이션, 스마트 조명까지. 나의 일상에 맞는 안드로이드 자동화 앱.">
+  <meta property="og:url" content="https://ogoons.github.io/algo/">
+  <meta property="og:image" content="https://ogoons.github.io/algo/assets/share-ko.webp">
+  <meta property="og:image:alt" content="알고 앱과 브랜드 로봇">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-en="Skip to content">본문으로 바로 가기</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="ALGO"><img src="./assets/wordmark.svg" width="534" height="227" alt="algo"></a>
+    <nav aria-label="Main navigation">
+      <a href="#moments" data-en="Use cases">사용 사례</a>
+      <a href="#routines" data-en="The app">앱 둘러보기</a>
+      <a href="#support" data-en="Support">지원</a>
+    </nav>
+    <button class="language" id="language" type="button" lang="en" hidden>English</button>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content frame">
+        <div class="hero-copy">
+          <h1 id="hero-title" data-en="Your routine.<br>On autopilot.">나만의 루틴,<br>알아서 착착.</h1>
+          <div class="hero-description">
+            <p data-en="Device settings, NFC, navigation and smart lights. Let ALGO handle the repetitive tasks on your Android.">기기 설정, NFC, 내비게이션, 스마트 조명.<br>안드로이드의 반복 작업을 알고로 자동화하세요.</p>
+            <a class="download" href="https://play.google.com/store/apps/details?id=com.ogoons.algo"><span data-en="Get it on Google Play">Google Play에서 다운로드</span><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <p class="small" data-en="Free with ads. Optional one-time Premium purchase.">광고가 포함된 무료 앱 · 프리미엄은 선택</p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="hero-app">
+            <div class="hero-phone" data-ui>
+              <img src="./assets/routine-list-ko.webp" data-shot="routine-list" width="810" height="1440" alt="알고 앱의 루틴 목록 화면" data-en-alt="ALGO app routine list" fetchpriority="high">
+              <div class="phone-add" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg><span data-en="Add routine">루틴 추가</span></div>
+            </div>
+          </figure>
+          <img class="hero-mascot" src="./assets/mascot-wave.webp" width="1000" height="1000" alt="" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="moments chapter" id="moments" aria-labelledby="moments-title">
+      <div class="frame">
+        <div class="section-intro">
+          <h2 id="moments-title" data-en="Leave it<br>to ALGO.">이런 순간,<br>알고에게.</h2>
+          <p data-en="A small tap can start a whole routine. Pick a moment and explore what you could automate.">작은 터치 하나가 여러 작업의 시작이 되도록.<br>익숙한 순간을 골라 자동화할 일을 살펴보세요.</p>
+        </div>
+        <div class="moment-layout">
+          <div class="moment-choices" role="group" aria-label="Automation examples" hidden>
+            <button type="button" data-case="nfc" aria-pressed="true" data-en="Tap an NFC tag">NFC 태그에 톡</button>
+            <button type="button" data-case="car" aria-pressed="false" data-en="Get in the car">차에 타면</button>
+            <button type="button" data-case="light" aria-pressed="false" data-en="Set the lights">조명도 내 취향대로</button>
+          </div>
+          <div class="routine-example" aria-live="polite" aria-atomic="true">
+            <h3 id="case-title">출발 준비, 한 번에.</h3>
+            <p id="case-trigger" class="trigger">NFC 태그를 인식하면</p>
+            <ol id="case-actions"><li>미디어 음량 설정</li><li>화면 밝기 조절</li><li>내비게이션 앱 실행</li></ol>
+            <p id="case-note" class="small">NFC를 지원하는 기기와 NFC 태그가 필요해요.</p>
+          </div>
+        </div>
+        <p class="small example-disclaimer" data-en="These are example routines. Available tasks depend on your device, Android version and permissions.">자동화 구성을 보여주는 예시예요. 기기, 안드로이드 버전과 허용한 권한에 따라 사용할 수 있는 동작이 달라져요.</p>
+      </div>
+    </section>
+
+    <section class="builder chapter" id="build" aria-labelledby="builder-title">
+      <div class="frame">
+        <div class="section-intro">
+          <h2 id="builder-title" data-en="A routine,<br>your way.">시작부터<br>동작까지.</h2>
+          <p data-en="Choose When to start, add an If check if needed, then arrange your Then tasks. That is your routine.">언제 시작할지 정하고, 필요한 조건을 확인하고,<br>할 일을 순서대로 쌓으면 나만의 루틴이 돼요.</p>
+        </div>
+        <div class="builder-strip">
+          <details name="building" open>
+            <summary><span data-en="When">시작</span></summary>
+            <div class="builder-panel"><p data-en="When should it start? An NFC tap, a Bluetooth connection or a location can be the beginning.">언제 시작할까요? NFC 태그, 블루투스 연결, 위치 등을 시작점으로 정해요.</p><img src="./assets/mascot-wave.webp" width="1000" height="1000" alt="손을 흔드는 알고 로봇" data-en-alt="ALGO robot waving" loading="lazy"></div>
+          </details>
+          <details name="building">
+            <summary><span data-en="If">조건</span></summary>
+            <div class="builder-panel"><p data-en="Only when it makes sense. Use If to check the device state before continuing.">필요할 때만 실행되도록. 기기 상태 등 확인할 조건을 더해요.</p><img src="./assets/mascot-blocks.webp" width="1000" height="1000" alt="블록을 쌓는 알고 로봇" data-en-alt="ALGO robot arranging blocks" loading="lazy"></div>
+          </details>
+          <details name="building">
+            <summary><span data-en="Then">동작</span></summary>
+            <div class="builder-panel"><p data-en="Set the volume, open an app or control a light. Arrange your Then tasks in the order you want.">음량을 바꾸고, 앱을 열고, 조명을 켜고. 원하는 동작을 순서대로 연결해요.</p><img src="./assets/mascot-automation.webp" width="1000" height="1000" alt="자동화를 준비하는 알고 로봇" data-en-alt="ALGO robot preparing an automation" loading="lazy"></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="routines chapter" id="routines" aria-labelledby="routines-title">
+      <div class="frame">
+        <div class="section-intro">
+          <h2 id="routines-title" data-en="Made for<br>your day.">내 일상에<br>맞춘 루틴.</h2>
+          <p data-en="From a fresh morning to winding down at night. Build routines around the things you do every day.">상쾌한 아침부터 잠들기 준비까지.<br>매일 하는 일에 내 이름표를 붙여보세요.</p>
+        </div>
+        <div class="app-row">
+          <div class="app-copy"><h3 data-en="Your routines,<br>at a glance.">루틴을<br>한눈에.</h3><p data-en="Keep your routines together and start or stop each one from the list. See which routines are running.">내가 만든 루틴을 모아두고, 목록에서 바로 시작하거나 멈춰요. 어떤 루틴이 실행 중인지도 확인할 수 있어요.</p></div>
+          <figure><div class="app-phone app-phone-list" data-ui><img src="./assets/routine-list-ko.webp" data-shot="routine-list" width="810" height="1440" alt="상쾌한 아침, 집중 시간, 잠들기 준비 등 알고의 루틴 목록" data-en-alt="ALGO routine list with morning, focus and bedtime routines" loading="lazy"><div class="phone-add" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg><span data-en="Add routine">루틴 추가</span></div></div><figcaption data-en="Your routines, in one place">나의 하루를 담은 루틴 목록</figcaption></figure>
+        </div>
+        <div class="app-row edit-row">
+          <div class="app-copy"><h3 data-en="Put your tasks<br>in order.">할 일을<br>차곡차곡.</h3><p data-en="Combine When, If and Then into a sequence. Give a familiar routine a new task whenever you need it.">시작, 조건, 동작을 조합해 순서를 만들어요. 익숙한 루틴에 새로운 할 일을 더할 수도 있어요.</p></div>
+          <figure><div class="app-phone" data-ui><img src="./assets/routine-edit-ko.webp" data-shot="routine-edit" width="810" height="1440" alt="시작과 동작을 순서대로 배치하는 알고 루틴 편집 화면" data-en-alt="ALGO routine editor with When and Then tasks arranged in order" loading="lazy"></div><figcaption data-en="A sequence that works for you">내 방식대로 연결하는 루틴</figcaption></figure>
+        </div>
+        <div class="app-row run-row">
+          <div class="app-copy"><h3 data-en="Follow each<br>task.">실행 과정도<br>꼼꼼하게.</h3><p data-en="Open a routine to see the progress of its tasks. Follow the sequence as ALGO works through your routine.">루틴을 열어 각 작업의 진행 상태를 살펴보세요. 알고가 어떤 순서로 일을 하고 있는지 확인할 수 있어요.</p></div>
+          <figure><div class="app-phone" data-ui><img src="./assets/run-detail-ko.webp" data-shot="run-detail" width="810" height="1440" alt="작업별 진행 상태를 보여주는 알고 루틴 실행 상세 화면" data-en-alt="ALGO run detail showing the progress of individual tasks" loading="lazy"></div><figcaption data-en="The progress of every task">작업별로 살펴보는 실행 상태</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="support chapter" id="support" aria-labelledby="support-title">
+      <div class="frame support-grid">
+        <div class="support-heading"><h2 id="support-title" data-en="Good to<br>know.">궁금한 점.</h2><img src="./assets/mascot-curious.webp?v=d781357bc2" width="1100" height="1100" alt="물음표와 함께 궁금해하는 알고 로봇" data-en-alt="Curious ALGO robot with a question mark" loading="lazy"></div>
+        <div class="faq">
+          <details name="faq"><summary><span data-en="Can I use ALGO for free?">무료로 사용할 수 있나요?</span></summary><p data-en="Yes. ALGO is free with ads. You can start by creating your own routine in the free version.">네. 알고는 광고가 포함된 무료 앱이에요. 무료 버전에서 나만의 루틴을 만들어 시작할 수 있어요.</p></details>
+          <details name="faq"><summary><span data-en="What does Premium include?">프리미엄은 무엇이 다른가요?</span></summary><p data-en="Premium removes ads and unlocks additional features with a one-time purchase. Check the app for the current price and included features.">한 번 구매하면 광고가 제거되고 더 다양한 기능을 사용할 수 있어요. 현재 가격과 제공 기능은 앱 안에서 확인해주세요.</p></details>
+          <details name="faq"><summary><span data-en="Which devices can I use?">어떤 기기에서 쓸 수 있나요?</span></summary><p data-en="ALGO is an Android app. Check Google Play for compatibility with your device. Available tasks vary by device and Android version.">알고는 안드로이드 앱이에요. 설치 가능 여부는 Google Play에서 확인해주세요. 기기와 안드로이드 버전에 따라 사용할 수 있는 동작이 달라요.</p></details>
+          <details name="faq"><summary><span data-en="Do I need an NFC tag?">NFC 태그가 꼭 필요한가요?</span></summary><p data-en="Only when you use NFC in a When step. You need both a tag and an NFC-capable device for those. Other When options can start a routine too.">NFC를 시작으로 쓰는 루틴에만 필요해요. 이때는 NFC 태그와 NFC를 지원하는 기기가 모두 필요해요. 다른 시작 항목으로 루틴을 실행할 수도 있어요.</p></details>
+          <details name="faq"><summary><span data-en="Why does a task need permission?">작업에 권한이 필요한 이유는요?</span></summary><p data-en="Some tasks, such as those using location or device controls, need Android permissions. Follow the guidance in the app for the tasks you choose.">위치나 기기 제어 등 일부 작업에는 안드로이드 권한이 필요해요. 사용할 작업에 맞춰 앱 안의 안내를 확인해주세요.</p></details>
+          <details name="faq"><summary><span data-en="Where can I get help?">문의는 어디로 하면 되나요?</span></summary><p><span data-en="Send your question to ">궁금한 점은 </span><a href="mailto:ogoons@hanmail.net">ogoons@hanmail.net</a><span data-en=". For troubleshooting, include your device and Android version.">으로 보내주세요. 사용 중인 기기와 안드로이드 버전을 함께 알려주시면 도움이 돼요.</span></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing chapter" id="download" aria-labelledby="closing-title">
+      <div class="frame closing-grid">
+        <div><h2 id="closing-title" data-en="Make room<br>for your day.">반복은 알고에게.<br>시간은 나에게.</h2><p data-en="Start with one small task. Your first routine is waiting.">매일 반복하던 작은 일 하나부터.<br>이제 첫 루틴을 만들어봐요.</p><a class="download" href="https://play.google.com/store/apps/details?id=com.ogoons.algo"><span data-en="Get it on Google Play">Google Play에서 다운로드</span><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><p class="small" data-en="For Android. Free with ads and optional Premium.">Android 전용 · 광고 포함 · 선택적 프리미엄 구매</p></div>
+        <img src="./assets/mascot-free-time.webp?v=61e1b4b47e" width="1100" height="1100" alt="시계를 들고 웃는 알고 로봇" data-en-alt="Smiling ALGO robot holding a clock" loading="lazy">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="frame footer-top"><a href="#" aria-label="ALGO"><img src="./assets/wordmark-dark.svg" width="534" height="227" alt="algo" loading="lazy"></a><div><a href="../privacy-algo.html" data-en="Privacy policy (Korean)">개인정보처리방침</a><a href="mailto:ogoons@hanmail.net" data-en="Contact">문의하기</a><a href="../" data-en="Developer blog">개발자 블로그</a></div></div>
+    <div class="frame footer-bottom"><p data-en="Little routines. More time for you.">나만의 루틴, 알아서 착착.</p><p>© ALGO · Daram Labs</p></div>
+  </footer>
+</body>
+</html>
